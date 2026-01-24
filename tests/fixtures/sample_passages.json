@@ -1,0 +1,142 @@
+{
+  "known_glosses": [
+    {
+      "id": "varro_subulo",
+      "text": "Tusci tibicinem subulo vocant",
+      "translation": "The Etruscans call the flute player 'subulo'",
+      "source": "Varro, De Lingua Latina",
+      "expected_word": "subulo",
+      "expected_pattern": "tusci_vocant",
+      "meaning": "flute player"
+    },
+    {
+      "id": "suetonius_aesar",
+      "text": "aesar enim Etrusca lingua deus dicitur",
+      "translation": "For 'aesar' in the Etruscan language means god",
+      "source": "Suetonius, Vita Divi Augusti 97",
+      "expected_word": "aesar",
+      "expected_pattern": "etrusca_lingua",
+      "meaning": "god"
+    },
+    {
+      "id": "festus_lanista",
+      "text": "lanista Etrusco vocabulo appellatur gladiatorum magister",
+      "translation": "The gladiator trainer is called lanista with an Etruscan word",
+      "source": "Festus (via Isidore)",
+      "expected_word": "lanista",
+      "expected_pattern": "etrusco_vocabulo",
+      "meaning": "gladiator trainer"
+    },
+    {
+      "id": "livy_histrio",
+      "text": "hister Tusco verbo ludio vocabatur",
+      "translation": "hister was called ludio in Tuscan language",
+      "source": "Livy, Ab Urbe Condita 7.2",
+      "expected_word": "ludio",
+      "expected_pattern": null,
+      "meaning": "actor, performer"
+    },
+    {
+      "id": "pliny_caseus",
+      "text": "apud Etruscos caseus maxime laudatur",
+      "translation": "Among the Etruscans cheese is most praised",
+      "source": "Pliny, Naturalis Historia (adapted)",
+      "expected_word": "caseus",
+      "expected_pattern": "apud_etruscos",
+      "meaning": null
+    },
+    {
+      "id": "varro_lucumo",
+      "text": "quod Etrusci lucumonem regem appellant",
+      "translation": "Which the Etruscans call the king lucumo",
+      "source": "Varro (reconstructed)",
+      "expected_word": "lucumonem",
+      "expected_pattern": "quod_etrusci",
+      "meaning": "king, ruler"
+    },
+    {
+      "id": "servius_mantissa",
+      "text": "mantissa Tusco nomine dicitur additamentum",
+      "translation": "mantissa is said with Tuscan name to mean addition",
+      "source": "Servius, Aeneid Commentary",
+      "expected_word": "mantissa",
+      "expected_pattern": "tusco_nomine",
+      "meaning": "addition, makeweight"
+    },
+    {
+      "id": "isidore_persona",
+      "text": "persona ab Etruscis derivata vocabulum",
+      "translation": "persona is a word derived from the Etruscans",
+      "source": "Isidore, Etymologiae",
+      "expected_word": "persona",
+      "expected_pattern": "ab_etruscis",
+      "meaning": "mask, person"
+    },
+    {
+      "id": "generic_atrium",
+      "text": "atrium Etrusca origine dictum",
+      "translation": "atrium is said to be of Etruscan origin",
+      "source": "Various",
+      "expected_word": "atrium",
+      "expected_pattern": "etrusca_origine",
+      "meaning": "hall, courtyard"
+    },
+    {
+      "id": "tyrrheni_lar",
+      "text": "Tyrrheni vocant larem domesticum",
+      "translation": "The Tyrrhenians call the household god lar",
+      "source": "Reconstructed",
+      "expected_word": "larem",
+      "expected_pattern": "tyrrheni_vocant",
+      "meaning": "household god"
+    }
+  ],
+  "negative_examples": [
+    {
+      "id": "neg_roman",
+      "text": "Romani autem vocant consulem magistratum",
+      "translation": "The Romans call the consul a magistrate",
+      "should_not_match": true,
+      "reason": "Pattern should only match Etruscan/Tuscan references"
+    },
+    {
+      "id": "neg_graeci",
+      "text": "Graeci lingua philosophiam vocant",
+      "translation": "In Greek language they call it philosophy",
+      "should_not_match": true,
+      "reason": "Pattern should only match Etruscan, not Greek references"
+    },
+    {
+      "id": "neg_partial",
+      "text": "tusculum oppidum antiquum",
+      "translation": "Tusculum is an ancient town",
+      "should_not_match": true,
+      "reason": "Tusculum is a place name, not Tusci/Etrusci reference"
+    }
+  ],
+  "complex_passages": [
+    {
+      "id": "complex_multi",
+      "text": "Tusci vocant subulo quod nos tibicinem, et Etrusca lingua ais deum significat",
+      "translation": "The Etruscans call subulo what we call flute player, and in Etruscan language ais means god",
+      "expected_words": ["subulo", "ais"],
+      "expected_count": 2
+    },
+    {
+      "id": "complex_context",
+      "text": "In libris haruspicum, quos Etrusci disciplinae suae auctores habent, legitur nomen aruspex ab Etruscis derivatum esse, quod Tusci vocant haruga extis inspiciendis praepositum",
+      "translation": "In the books of the haruspices, which the Etruscans have as authorities of their discipline, one reads that the name haruspex is derived from the Etruscans, which the Tuscans call haruga the one appointed for inspecting entrails",
+      "expected_words": ["haruga"],
+      "expected_count": 1
+    }
+  ],
+  "greek_passages": [
+    {
+      "id": "greek_tyrr",
+      "text": "Τυρρηνοὶ καλοῦσι λαρ τὸν οἰκεῖον δαίμονα",
+      "translation": "The Tyrrhenians call lar the household deity",
+      "expected_word": "λαρ",
+      "language": "greek"
+    }
+  ]
+}
