@@ -31,8 +31,17 @@ LABELED_FILE = DATA_DIR / "labeled_candidates.json"
 def load_labeled_data() -> list[dict]:
     """Load existing labeled candidates from JSON file."""
     if LABELED_FILE.exists():
-        with open(LABELED_FILE, "r", encoding="utf-8") as f:
-            return json.load(f)
+        try:
+            with open(LABELED_FILE, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                if isinstance(data, list):
+                    return data
+                print(f"Warning: {LABELED_FILE} has unexpected format, starting fresh.")
+                return []
+        except json.JSONDecodeError as e:
+            print(f"Warning: Could not parse {LABELED_FILE}: {e}")
+            print("Starting with empty labeled data. Old file will be overwritten on first save.")
+            return []
     return []
 
 
@@ -71,7 +80,8 @@ def display_candidate(candidate, index: int, total: int) -> None:
     print(f"\nWord: {candidate.etruscan_word}")
     if candidate.meaning_proposed:
         print(f"Proposed meaning: {candidate.meaning_proposed}")
-    print(f"Pattern confidence: {candidate.pattern_confidence:.2f}" if candidate.pattern_confidence else "")
+    if candidate.pattern_confidence:
+        print(f"Pattern confidence: {candidate.pattern_confidence:.2f}")
     print(f"\nContext:")
     print(format_context(
         candidate.context_before,
