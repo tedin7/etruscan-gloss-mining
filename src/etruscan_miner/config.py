@@ -7,7 +7,9 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).parent.parent.parent
 DATA_DIR = PROJECT_ROOT / "data"
 CORPUS_DIR = DATA_DIR / "corpus"
+CORPUS_CACHE_DIR = CORPUS_DIR  # General cache for all corpus sources
 PERSEUS_CACHE_DIR = CORPUS_DIR / "perseus"
+LATIN_LIBRARY_CACHE_DIR = CORPUS_DIR / "latin_library"
 DB_PATH = DATA_DIR / "etruscan_glosses.db"
 
 # Perseus API
@@ -63,3 +65,4 @@ TARGET_WORKS = {
 DATA_DIR.mkdir(parents=True, exist_ok=True)
 CORPUS_DIR.mkdir(parents=True, exist_ok=True)
 PERSEUS_CACHE_DIR.mkdir(parents=True, exist_ok=True)
+LATIN_LIBRARY_CACHE_DIR.mkdir(parents=True, exist_ok=True)
