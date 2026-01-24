@@ -1,0 +1,20 @@
+# Claude Code
+.claude/
+
+# Copyright-protected files (keep local only)
+data/pdf/
+data/excel/
+data/extracted/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.bak
