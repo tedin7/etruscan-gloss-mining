@@ -143,6 +143,51 @@ SECONDARY_PATTERNS = [
         description="Etrusci appellant X - The Etruscans call X",
         confidence=0.85,
     ),
+    # Varro-style patterns: "ita dicunt X Tusci", "dicunt X Tusci"
+    LatinPattern(
+        name="dicunt_tusci",
+        regex=r"(?:ita\s+)?dicunt\s+(\w+)\s+[Tt]usci",
+        description="dicunt X Tusci - The Tuscans call X",
+        confidence=0.90,
+    ),
+    LatinPattern(
+        name="tusci_dicunt",
+        regex=r"[Tt]usci\s+(?:ita\s+)?dicunt\s+(\w+)",
+        description="Tusci dicunt X - The Tuscans say X",
+        confidence=0.90,
+    ),
+    LatinPattern(
+        name="dictum_a_tuscis",
+        regex=r"(\w+)\s+dict\w+\s+a\s+[Tt]uscis",
+        description="X dictum a Tuscis - X named by the Tuscans",
+        confidence=0.85,
+    ),
+    LatinPattern(
+        name="tuscanicum_dictum",
+        regex=r"([Tt]uscanicum)\s+dict\w+\s+a\s+[Tt]uscis",
+        description="Tuscanicum dictum - Tuscan style named by Tuscans",
+        confidence=0.80,
+    ),
+    LatinPattern(
+        name="sabini_dicunt",
+        regex=r"[Ss]abini\s+(\w+)\s+dicunt",
+        description="Sabini X dicunt - Sabines call X (related dialect)",
+        confidence=0.75,
+    ),
+    # "X dictus quod ita dicunt ... Tusci" pattern (Varro style)
+    LatinPattern(
+        name="word_dictus_tusci",
+        regex=r"(\w+)\s+dict\w+[,]?\s+quod\s+(?:ita\s+)?dic\w+\s+\w+\s+[Tt]usci",
+        description="X dictus quod dicunt Tusci - X called because Tuscans say",
+        confidence=0.90,
+    ),
+    # "in Etruria" context
+    LatinPattern(
+        name="in_etruria",
+        regex=r"(\w+)\s+in\s+[Ee]truria",
+        description="X in Etruria - X in Etruria (geographic context)",
+        confidence=0.70,
+    ),
 ]
 
 # Tertiary patterns - medium confidence (need more context validation)
