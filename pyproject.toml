@@ -1,0 +1,62 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "etruscan-miner"
+version = "0.1.0"
+description = "NLP pipeline for mining Etruscan glosses from ancient texts"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [
+    {name = "Etruscan Gloss Mining Project"}
+]
+keywords = ["etruscan", "nlp", "classics", "linguistics", "text-mining"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Text Processing :: Linguistic",
+]
+dependencies = [
+    "requests>=2.28",
+    "sqlalchemy>=2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+]
+full = [
+    "cltk>=1.2",
+    "spacy>=3.5",
+    "pandas>=2.0",
+    "lxml",
+    "beautifulsoup4",
+    "click>=8.0",
+    "rich",
+    "tqdm",
+    "requests-cache",
+    "ratelimit",
+]
+
+[project.scripts]
+etruscan-setup = "scripts.setup_database:main"
+etruscan-import = "scripts.import_seeds:main"
+etruscan-mine = "scripts.mine_glosses:main"
+etruscan-validate = "scripts.validate_candidates:main"
+etruscan-export = "scripts.export_results:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
