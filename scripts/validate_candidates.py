@@ -2,6 +2,7 @@
 """Validate candidate glosses using the validation pipeline."""
 
 import argparse
+import logging
 import sys
 from pathlib import Path
 
@@ -14,13 +15,20 @@ from etruscan_miner.validation.cross_reference import CrossReferenceChecker
 from etruscan_miner.validation.linguistic import LinguisticValidator
 from etruscan_miner.validation.scorer import ValidationPipeline
 
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+)
 
-def validate_word(word: str, repo: Repository):
+
+def validate_word(word: str, repo: Repository, use_ml: bool = False):
     """Validate a single word interactively.
 
     Args:
         word: Word to validate
         repo: Database repository
+        use_ml: Enable ML-based validation
     """
     cross_ref = CrossReferenceChecker(repo)
     linguistic = LinguisticValidator()
@@ -48,6 +56,25 @@ def validate_word(word: str, repo: Repository):
     if ling_result.issues:
         print(f"  Issues: {', '.join(ling_result.issues)}")
 
+    # ML word classifier if enabled
+    if use_ml:
+        print(f"\nML Word Classifier:")
+        try:
+            from etruscan_miner.validation.word_classifier import WordClassifier
+            classifier = WordClassifier.load()
+            word_score = classifier.predict(word)
+            print(f"  Score: {word_score:.2f}")
+            if word_score >= 0.7:
+                print("  Verdict: Looks Etruscan")
+            elif word_score >= 0.3:
+                print("  Verdict: Possibly Etruscan")
+            else:
+                print("  Verdict: Does NOT look Etruscan")
+        except FileNotFoundError:
+            print("  Model not found. Train with: python scripts/train_word_classifier.py")
+        except Exception as e:
+            print(f"  Error: {e}")
+
     # Combined score (without pattern/context)
     combined = (cr_result.score * 0.5) + (ling_result.score * 0.5)
     print(f"\nCombined Score: {combined:.2f}")
@@ -59,15 +86,27 @@ def validate_word(word: str, repo: Repository):
         print("  Verdict: UNLIKELY ETRUSCAN")
 
 
-def validate_pending(repo: Repository, limit: int = 100, status: str = "pending"):
+def validate_pending(repo: Repository, limit: int = 100, status: str = "pending",
+                     use_ml: bool = False):
     """Validate pending candidates.
 
     Args:
         repo: Database repository
         limit: Maximum candidates to process
         status: Status to filter by
+        use_ml: Enable ML-based three-layer filtering
     """
-    pipeline = ValidationPipeline(repo)
+    pipeline = ValidationPipeline(repo, use_ml=use_ml)
+
+    # Show ML initialization warnings if any
+    if use_ml:
+        print("\nML filtering enabled")
+        if pipeline.ml_warnings:
+            print("  Warnings:")
+            for warning in pipeline.ml_warnings:
+                print(f"    - {warning}")
+        else:
+            print("  All ML components loaded successfully")
 
     if status == "pending":
         print(f"\nValidating up to {limit} pending candidates...")
@@ -100,6 +139,15 @@ def validate_pending(repo: Repository, limit: int = 100, status: str = "pending"
             print(f"  Match: {result.cross_ref_result.matched_word} "
                   f"({result.cross_ref_result.match_type})")
 
+        # Show ML rejection reason if applicable
+        if result.ml_rejection_reason:
+            print(f"  ML Rejection: {result.ml_rejection_reason}")
+
+        # Show ML scores if present
+        if result.ml_scores:
+            ml_parts = [f"{k}: {v:.2f}" for k, v in result.ml_scores.items()]
+            print(f"  ML Scores: {' | '.join(ml_parts)}")
+
     # Print summary
     summary = pipeline.get_summary(results)
     print(f"\n{'='*80}")
@@ -113,6 +161,16 @@ def validate_pending(repo: Repository, limit: int = 100, status: str = "pending"
     print(f"Recommendations: Accept={summary['recommendations']['accept']}, "
           f"Review={summary['recommendations']['review']}, "
           f"Reject={summary['recommendations']['reject']}")
+
+    # Print ML rejection statistics if ML was used
+    if "ml_rejections" in summary:
+        ml_stats = summary["ml_rejections"]
+        print(f"\nML Rejection Statistics:")
+        print(f"  Total rejections: {ml_stats['total']} ({ml_stats['rejection_rate']:.1%})")
+        print(f"  By layer:")
+        print(f"    - No Etruscan attribution: {ml_stats['by_layer']['no_attribution']}")
+        print(f"    - Word not Etruscan-like: {ml_stats['by_layer']['not_etruscan_like']}")
+        print(f"    - Isidore penalty: {ml_stats['by_layer']['isidore_penalty']}")
 
 
 def show_accepted(repo: Repository, limit: int = 50):
@@ -192,13 +250,28 @@ def main():
         action="store_true",
         help="Show validation statistics",
     )
+    parser.add_argument(
+        "--use-ml",
+        action="store_true",
+        help="Enable ML-based three-layer filtering (requires trained models)",
+    )
+    parser.add_argument(
+        "--verbose",
+        "-v",
+        action="store_true",
+        help="Enable verbose logging",
+    )
 
     args = parser.parse_args()
+
+    # Set logging level
+    if args.verbose:
+        logging.getLogger().setLevel(logging.DEBUG)
 
     repo = Repository(DB_PATH)
 
     if args.word:
-        validate_word(args.word, repo)
+        validate_word(args.word, repo, use_ml=args.use_ml)
     elif args.show_accepted:
         show_accepted(repo, args.limit)
     elif args.show_review:
@@ -209,7 +282,7 @@ def main():
         for table, count in stats.items():
             print(f"  {table}: {count}")
     else:
-        validate_pending(repo, args.limit, args.status)
+        validate_pending(repo, args.limit, args.status, use_ml=args.use_ml)
 
 
 if __name__ == "__main__":
