@@ -29,6 +29,42 @@ python scripts/validate_candidates.py --word "aisar"
 
 # Export results
 python scripts/export_results.py --format markdown --type report -o results/findings.md
+
+# Download corpus texts (all sources)
+python scripts/download_all_texts.py --all
+
+# Download high-priority texts only (Isidore, Varro, Festus, Solinus)
+python scripts/download_all_texts.py --latin-library --priority high
+
+# Download from specific source
+python scripts/download_all_texts.py --latin-library  # Latin Library HTML
+python scripts/download_all_texts.py --perseus        # Perseus CTS API
+python scripts/download_all_texts.py --github         # Clone CLTK repos
+
+# Show corpus download statistics
+python scripts/download_all_texts.py --stats
+
+# Import inscription vocabulary from Zenodo/CIEW corpus
+python scripts/import_inscriptions.py              # Import 10,000+ words
+python scripts/import_inscriptions.py --stats      # Show statistics
+python scripts/import_inscriptions.py --dry-run    # Preview without importing
+
+# Download and import Hesychius lexicon glosses
+python scripts/download_hesychius.py --list        # List known glosses
+python scripts/download_hesychius.py --download --import-db  # Full import
+
+# Mine Greek texts for Etruscan references
+python scripts/mine_glosses.py --corpus greek      # Mine all Greek works
+python scripts/mine_glosses.py --corpus greek --greek-work dionysius_ant_rom  # Specific work
+
+# Test Greek pattern matching
+python scripts/mine_glosses.py --text "Τυρρηνοί καλοῦσι λάρνα"
+
+# Train word classifier (Layer 2 ML model)
+python scripts/train_word_classifier.py --test --importance
+
+# Use word classifier
+python -c "from etruscan_miner.validation import WordClassifier; wc = WordClassifier.load(); print(wc.predict('ais'))"
 ```
 
 ## Architecture
@@ -53,20 +89,34 @@ Perseus API → text_cache.py → mine_glosses.py → candidates table
 - **validation/**: Multi-factor scoring pipeline
   - `cross_reference.py`: Matches against known vocabulary (exact/root/similar)
   - `linguistic.py`: Etruscan phonotactic rules (no voiced stops b/d/g, typical endings)
+  - `dependency_filter.py`: Layer 1 - spaCy dependency parsing for Etruscan attribution
+  - `word_classifier.py`: Layer 2 - Character n-gram ML classifier for Etruscan-like words
   - `scorer.py`: Combines pattern confidence (30%), cross-ref (30%), linguistic (20%), context (20%)
 
 - **db/**: SQLite persistence
   - `schema.sql`: 10 tables (authors, works, passages, candidates, verified_glosses, etc.)
   - `repository.py`: CRUD operations, all queries go through `Repository` class
 
-- **corpus/**: Text acquisition
-  - `perseus.py`: CTS API client with rate limiting
+- **corpus/**: Text acquisition from multiple sources
+  - `perseus.py`: CTS API client (Pliny NH, Livy, Virgil available; Varro/Festus NOT in inventory)
+  - `latin_library.py`: HTML scraper for thelatinlibrary.com (100+ texts including Isidore, Livy, Suetonius)
+  - `greek_texts.py`: Greek texts from Perseus (Dionysius, Strabo, Herodotus)
+  - `inscriptions.py`: CIEW corpus loader (10,000+ Etruscan words from inscriptions)
+  - `hesychius.py`: Hesychius lexicon parser for Tyrrhenian glosses
   - `text_cache.py`: Local caching to avoid repeated API calls
 
 ### Key Data Files
 - `ANCIENT_GLOSSES_VERIFIED.md`: 43+ glosses with ancient source citations
 - `CONSENSUS_GLOSSES_FORNI.md`: Academic consensus vocabulary (Forni et al.)
 - `data/etruscan_glosses.db`: SQLite database (not in git)
+- `data/latin_vocabulary.txt`: Latin vocabulary for classifier training (~1400 words)
+- `data/models/word_classifier.pkl`: Trained word classifier model
+- `data/corpus/`: Downloaded texts (not in git, ~140 MB when fully populated)
+  - `latin_library/`: HTML files from thelatinlibrary.com
+  - `perseus/`: XML from Perseus CTS API
+  - `github/`: Cloned CLTK repositories
+  - `inscriptions/`: Etruscan inscription corpus (Zenodo CSV + CIEW text)
+  - `hesychius/`: Hesychius lexicon extracts
 
 ### Validation Thresholds
 - HIGH confidence: ≥0.85 → auto-accept
@@ -76,6 +126,19 @@ Perseus API → text_cache.py → mine_glosses.py → candidates table
 ## Testing
 
 Tests use fixtures in `tests/fixtures/sample_passages.json` containing known glosses and negative examples. Pattern tests verify >70% recall on documented glosses.
+
+## Corpus Sources
+
+| Source | Available Texts | Notes |
+|--------|-----------------|-------|
+| Latin Library | Varro, Isidore (20 books), Livy (37 books), Suetonius, Festus Breviarium | HTML scraping, 2s rate limit |
+| Perseus CTS | Pliny NH, Livy, Virgil Aeneid | GetValidReff broken; use GetPassage |
+| Perseus Greek | Dionysius, Strabo Geography, Herodotus, Plutarch | Greek texts with Τυρρηνοί refs |
+| GitHub/CLTK | lat_text_latin_library | Pre-scraped, ~2000 files |
+| Inscriptions | CIEW corpus (Zenodo + Internet Archive) | 10,000+ Etruscan words from inscriptions |
+| Hesychius | Greek lexicon extracts | Scholarly glosses with Tyrrhenian tags |
+
+**Important:** Varro, Festus De Verborum Significatione, Servius, and Isidore are NOT in Perseus CTS inventory. Use Latin Library for these.
 
 ## Claude Teacher Mode
 
