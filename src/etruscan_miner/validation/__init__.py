@@ -5,6 +5,7 @@ from .dependency_filter import AttributionDetails, DependencyFilter, DepFilter
 from .linguistic import LinguisticResult, LinguisticValidator
 from .scorer import ValidationPipeline, ValidationScore
 from .word_classifier import WordClassifier
+from .context_classifier import ContextClassifier, get_available_backends
 
 __all__ = [
     # Cross-reference
@@ -16,6 +17,9 @@ __all__ = [
     "DepFilter",
     # Word classifier (Layer 2)
     "WordClassifier",
+    # Context classifier (Layer 3)
+    "ContextClassifier",
+    "get_available_backends",
     # Linguistic validation
     "LinguisticResult",
     "LinguisticValidator",
