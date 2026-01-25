@@ -144,6 +144,89 @@ CREATE INDEX IF NOT EXISTS idx_vocab_word ON etruscan_vocabulary(word_normalized
 CREATE INDEX IF NOT EXISTS idx_verified_word ON verified_glosses(etruscan_normalized);
 CREATE INDEX IF NOT EXISTS idx_validations_candidate ON validations(candidate_id);
 
+-- Linguistic parallels table: Cross-linguistic comparisons (Lemnian, Raetic, Latin loans, etc.)
+CREATE TABLE IF NOT EXISTS linguistic_parallels (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    etruscan_word TEXT,
+    parallel_word TEXT NOT NULL,
+    parallel_language TEXT NOT NULL,  -- 'lemnian', 'raetic', 'latin', 'greek', 'umbrian', 'oscan'
+    relationship_type TEXT,  -- 'cognate', 'loanword', 'substrate', 'shared_root', 'borrowed_from', 'borrowed_to'
+    confidence REAL CHECK (confidence BETWEEN 0 AND 1),
+    source TEXT,
+    notes TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Predicted forms table: Morphologically predicted unattested forms
+CREATE TABLE IF NOT EXISTS predicted_forms (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    base_word TEXT NOT NULL,
+    predicted_form TEXT NOT NULL,
+    morphological_analysis TEXT,  -- JSON: {"root": "clan", "suffix": "-al", "meaning": "of the son"}
+    found_in_corpus BOOLEAN DEFAULT FALSE,
+    passage_id INTEGER,
+    confidence REAL CHECK (confidence BETWEEN 0 AND 1),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (passage_id) REFERENCES passages(id)
+);
+
+-- Corpus sources table: Track new corpus sources for discovery
+CREATE TABLE IF NOT EXISTS corpus_sources (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL UNIQUE,
+    source_type TEXT,  -- 'medieval_glossary', 'papyrus', 'byzantine', 'archaeological', 'inscription', 'lexicon'
+    url TEXT,
+    last_updated TIMESTAMP,
+    document_count INTEGER DEFAULT 0,
+    reliability_score REAL CHECK (reliability_score BETWEEN 0 AND 1),
+    notes TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Hapax legomena table: Track rare words for anomaly detection
+CREATE TABLE IF NOT EXISTS hapax_legomena (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    word TEXT NOT NULL,
+    word_normalized TEXT NOT NULL,
+    occurrence_count INTEGER DEFAULT 1,
+    first_passage_id INTEGER,
+    etruscan_context BOOLEAN DEFAULT FALSE,  -- Appears in Etruscan-related passage
+    phonotactic_score REAL,  -- Score from LinguisticValidator
+    is_candidate BOOLEAN DEFAULT FALSE,
+    notes TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (first_passage_id) REFERENCES passages(id)
+);
+
+-- Semantic domains table: Track words by semantic field
+CREATE TABLE IF NOT EXISTS semantic_domains (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL UNIQUE,
+    description TEXT,
+    boost_factor REAL DEFAULT 0.0,  -- Score boost for words in this domain
+    keywords TEXT,  -- JSON array of domain keywords
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Word domain associations
+CREATE TABLE IF NOT EXISTS word_domains (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    word TEXT NOT NULL,
+    domain_id INTEGER NOT NULL,
+    confidence REAL DEFAULT 1.0,
+    FOREIGN KEY (domain_id) REFERENCES semantic_domains(id),
+    UNIQUE(word, domain_id)
+);
+
+-- Indexes for new tables
+CREATE INDEX IF NOT EXISTS idx_parallels_etruscan ON linguistic_parallels(etruscan_word);
+CREATE INDEX IF NOT EXISTS idx_parallels_language ON linguistic_parallels(parallel_language);
+CREATE INDEX IF NOT EXISTS idx_predicted_base ON predicted_forms(base_word);
+CREATE INDEX IF NOT EXISTS idx_predicted_form ON predicted_forms(predicted_form);
+CREATE INDEX IF NOT EXISTS idx_hapax_word ON hapax_legomena(word_normalized);
+CREATE INDEX IF NOT EXISTS idx_hapax_etruscan ON hapax_legomena(etruscan_context);
+CREATE INDEX IF NOT EXISTS idx_word_domains_word ON word_domains(word);
+
 -- Insert default patterns
 INSERT OR IGNORE INTO patterns (name, regex, language, description, base_confidence) VALUES
     ('tusci_vocant', '[Tt]usci?\s+voca(?:n)?t\s+(\w+)', 'latin', 'Pattern: Tusci vocant X (The Etruscans call X)', 0.90),

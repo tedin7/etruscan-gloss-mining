@@ -1,12 +1,12 @@
 # Etruscan Gloss Mining - Findings Report
-**Generated:** 2026-01-24
+**Generated:** 2026-01-25
 
 ---
 
 ## Executive Summary
 
 This report summarizes the results of computational mining for Etruscan
-glosses in ancient Latin and Greek texts.
+glosses in ancient Latin and Greek texts using a multi-phase discovery pipeline.
 
 ### Statistics
 
@@ -14,10 +14,61 @@ glosses in ancient Latin and Greek texts.
 |--------|-------|
 | Verified Glosses (seed data) | 134 |
 | Known Vocabulary | 10157 |
-| Mining Patterns | 8 |
-| Total Candidates | 625 |
-| Accepted Candidates | 97 |
-| Under Review | 37 |
+| Mining Patterns | 30+ |
+| Total Candidates | 2672 |
+| Accepted Candidates | 306 |
+| Under Review | 78 |
+
+---
+
+## Discovery Pipeline Results (2026-01-25)
+
+### Full Corpus Discovery
+
+Ran unified discovery pipeline across 99 Latin Library texts using 6 discovery methods:
+
+| Method | Description |
+|--------|-------------|
+| Pattern Mining | Explicit patterns (Tusci vocant) + implicit patterns |
+| Cross-Linguistic | Lemnian, Raetic, Latin loanword analysis |
+| Phonotactic | Non-Latin phonology detection |
+| ML/NER | Foreign word detection, etymology passages |
+| Semantic Search | Topic-based relevance (divination, theatre, religion) |
+| Author Weighting | Source reliability (Varro=0.95, Isidore=0.40) |
+
+### High-Confidence Discoveries
+
+| Word | Confidence | Evidence |
+|------|------------|----------|
+| **persona** | 0.98 | Known loan + Raetic śtena parallel |
+| **tuscanicum** | 0.94 | Explicit Etruscan attribution |
+| **tibicines** | 0.94 | Theatre domain, Etruscan music tradition |
+| **haruspex** | 0.89 | Known loan + Lemnian haralio parallel |
+| **lanterna** | 0.85 | Raetic śtena parallel |
+| **vana** | 0.84 | Lemnian vanala + Raetic śtena |
+| **histrio** | 0.81 | Known Etruscan loan (actor) |
+| **marathona** | 0.80 | Lemnian maraśm + Raetic parallels |
+| **interamna** | 0.79 | Etruscan place name pattern |
+| **pristina** | 0.79 | Raetic parallel + -na ending |
+
+### Cross-Linguistic Parallels Found
+
+| Etruscan | Lemnian | Raetic | Notes |
+|----------|---------|--------|-------|
+| avil (year) | aviś | - | High confidence cognate |
+| maru (magistrate) | maraśm | - | Title parallel |
+| nefts (grandson) | naphoth | - | Kinship term |
+| -al (genitive) | -ale | -ale | Shared morpheme |
+| Tinia (Jupiter) | - | tinake | Theonym |
+| Velchans (Vulcan) | - | velχanu | Theonym |
+
+### Discovery Statistics
+
+- **Texts processed:** 99 (Latin Library)
+- **Unique candidates:** 515
+- **High confidence (≥0.70):** 78
+- **Medium confidence (0.50-0.69):** 400
+- **Discovery methods active:** 6
 
 ---
 
@@ -46,12 +97,13 @@ glosses in ancient Latin and Greek texts.
 | **Lanterna** | 0.75 | quod lambentis motum ostendere...lucem interius habeat clausam. |
 | **anno** | 0.75 | aduersus Vmbros missa a flumin...aduersus indutias paratum bell |
 | **se** | 0.75 | inorum prodente ciuitatem fact...fidemque quam implorassent ab  |
-| **eius** | 0.70 | am marinas propter astabat pla..., non Latio quaerundae. Versib |
+| **Lentis** | 0.75 | yptia. [4] Faba fresa dicta eo...humida et lenta est, vel quod  |
 
 ### Candidates Under Review
 
 The following candidates require expert review:
 
+- **tibicines**: `ita dicunt tibicines Tusci`
 - **autem**: `autem vocatur quod`
 - **Spes**: `Spes vocata quod`
 - **Iscurra**: `Iscurra vocatur quia`
@@ -61,7 +113,6 @@ The following candidates require expert review:
 - **Arista**: `Arista appellata quod`
 - **Alnus**: `Alnus vocatur quod`
 - **Arca**: `Arca dicta quod`
-- **Clavis**: `Clavis dicta quod`
 
 ---
 

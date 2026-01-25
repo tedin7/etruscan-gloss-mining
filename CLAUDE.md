@@ -72,6 +72,23 @@ python scripts/train_context_classifier.py --test
 
 # Use word classifier
 python -c "from etruscan_miner.validation import WordClassifier; wc = WordClassifier.load(); print(wc.predict('ais'))"
+
+# === NEW DISCOVERY PIPELINE ===
+
+# Run full discovery on single text
+python scripts/discover_new_words.py --text "Tusci vocant subulo quod nos tibicinem"
+
+# Run discovery on corpus (Latin Library)
+python scripts/run_full_discovery.py --sources latin_library --min-confidence 0.60
+
+# Run on all sources
+python scripts/run_full_discovery.py --sources latin_library,perseus,greek
+
+# Export discovery results
+python scripts/run_full_discovery.py --output results/discoveries.json
+
+# Test cross-linguistic modules
+python -c "from etruscan_miner.linguistics import LemnianAnalyzer; la = LemnianAnalyzer(); print(len(la.get_high_confidence_parallels()), 'Lemnian parallels')"
 ```
 
 ## Architecture
@@ -112,6 +129,35 @@ Perseus API → text_cache.py → mine_glosses.py → candidates table
   - `inscriptions.py`: CIEW corpus loader (10,000+ Etruscan words from inscriptions)
   - `hesychius.py`: Hesychius lexicon parser for Tyrrhenian glosses
   - `text_cache.py`: Local caching to avoid repeated API calls
+  - `medieval_glossaries.py`: Medieval Latin glossaries (Isidore, Placidus, CGL)
+  - `byzantine.py`: Byzantine encyclopedias (Suda, Etymologicum Magnum)
+  - `papyri.py`: Papyri.info integration for Greek documentary papyri
+  - `archaeological.py`: Archaeological inscription databases (EAGLE, TLE)
+
+- **linguistics/**: Cross-linguistic analysis for Etruscan discovery
+  - `lemnian.py`: Lemnian corpus (~40 words from Kaminia stele, only known Etruscan relative)
+  - `raetic.py`: Raetic inscriptions (~200 texts from Alpine region)
+  - `loanword_detector.py`: Latin words with suspected Etruscan origin (~25 confirmed loans)
+  - `greek_substrate.py`: Pre-Greek Tyrrhenian substrate words
+  - `italic_parallels.py`: Umbrian/Oscan parallels (Iguvine Tables, etc.)
+  - `morphology.py`: Etruscan morphological analysis (roots, suffixes, case endings)
+  - `form_predictor.py`: Predict unattested forms from known roots
+  - `name_expander.py`: Expand theonyms and anthroponyms (Tinia → Tinial, etc.)
+
+- **statistics/**: Statistical anomaly detection
+  - `hapax_analyzer.py`: Find words appearing only once in Latin literature
+  - `phonotactic_anomaly.py`: Detect words with non-Latin phonology
+  - `geographic_scorer.py`: Boost words near Etruscan geographic markers
+  - `author_profiler.py`: Weight discoveries by author reliability (Varro > Isidore)
+
+- **ml/**: Machine learning for advanced discovery
+  - `embeddings.py`: Word embeddings for semantic similarity clustering
+  - `semantic_search.py`: Topic-based semantic search (divination, theatre, religion)
+  - `foreign_word_ner.py`: Named Entity Recognition for foreign words in Latin text
+  - `etymology_detector.py`: Detect etymology discussion passages
+
+- **discovery/**: Unified discovery pipeline
+  - `pipeline.py`: Orchestrates all discovery methods with multi-factor scoring
 
 ### Key Data Files
 - `ANCIENT_GLOSSES_VERIFIED.md`: 43+ glosses with ancient source citations

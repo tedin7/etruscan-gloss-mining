@@ -1,0 +1,8231 @@
+{
+  "timestamp": "2026-01-25T18:59:05.557406",
+  "texts_processed": 99,
+  "unique_candidates": 515,
+  "high_confidence": 78,
+  "medium_confidence": 400,
+  "candidates": [
+    {
+      "word": "persona",
+      "confidence": 0.98,
+      "sources_count": 6,
+      "sources": [
+        "latin_library:varro_ll_9",
+        "latin_library:isidore_7",
+        "latin_library:isidore_8",
+        "latin_library:suetonius_caesar",
+        "latin_library:suetonius_domitian"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "LOANWORD_ANALYSIS",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Known loan: persona",
+        "Raetic: \u015btena"
+      ],
+      "meaning": "mask, character"
+    },
+    {
+      "word": "tuscanicum",
+      "confidence": 0.9372499999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_5"
+      ],
+      "methods": [
+        "ETYMOLOGY_DETECTION",
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "tibicines",
+      "confidence": 0.9365000000000001,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_7"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "haruspex",
+      "confidence": 0.8865000000000001,
+      "sources_count": 6,
+      "sources": [
+        "latin_library:varro_ll_7",
+        "latin_library:suetonius_caesar",
+        "latin_library:suetonius_galba",
+        "latin_library:livy_8",
+        "latin_library:livy_26"
+      ],
+      "methods": [
+        "LEMNIAN_PARALLEL",
+        "LOANWORD_ANALYSIS",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Known loan: haruspex",
+        "Lemnian: haralio"
+      ],
+      "meaning": "diviner (inspects entrails)"
+    },
+    {
+      "word": "lanterna",
+      "confidence": 0.847,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_20"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "vana",
+      "confidence": 0.83915,
+      "sources_count": 14,
+      "sources": [
+        "latin_library:isidore_8",
+        "latin_library:isidore_9",
+        "latin_library:suetonius_caligula",
+        "latin_library:livy_1",
+        "latin_library:livy_2"
+      ],
+      "methods": [
+        "LEMNIAN_PARALLEL",
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Lemnian: vanala",
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "theona",
+      "confidence": 0.8289,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:varro_ll_8",
+        "latin_library:varro_ll_9"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "ana",
+      "confidence": 0.8289,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:varro_ll_8",
+        "latin_library:varro_ll_10"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "portione",
+      "confidence": 0.8289,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_10"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "ister",
+      "confidence": 0.81075,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_7"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "histrio",
+      "confidence": 0.8074999999999999,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:solinus_mommsen2",
+        "latin_library:solinus_1a"
+      ],
+      "methods": [
+        "LOANWORD_ANALYSIS",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Known loan: histrio"
+      ],
+      "meaning": "actor"
+    },
+    {
+      "word": "poena",
+      "confidence": 0.8059999999999999,
+      "sources_count": 6,
+      "sources": [
+        "latin_library:varro_ll_5",
+        "latin_library:varro_ll_9",
+        "latin_library:isidore_5",
+        "latin_library:suetonius_domitian",
+        "latin_library:livy_8"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "frena",
+      "confidence": 0.8059999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_20"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "marathona",
+      "confidence": 0.8044999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:ampelius"
+      ],
+      "methods": [
+        "LEMNIAN_PARALLEL",
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Lemnian: mara\u015bm",
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "amictui",
+      "confidence": 0.7894999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_5"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "interamna",
+      "confidence": 0.7894999999999999,
+      "sources_count": 5,
+      "sources": [
+        "latin_library:varro_ll_5",
+        "latin_library:solinus_mommsen2",
+        "latin_library:solinus_3a",
+        "latin_library:livy_27",
+        "latin_library:livy_29"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "crustumerina",
+      "confidence": 0.7894999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_5"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "pistrina",
+      "confidence": 0.7894999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_5"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "eius",
+      "confidence": 0.7894999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_7"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "pristina",
+      "confidence": 0.7894999999999999,
+      "sources_count": 10,
+      "sources": [
+        "latin_library:varro_ll_7",
+        "latin_library:isidore_6",
+        "latin_library:solinus_mommsen2",
+        "latin_library:solinus_4a",
+        "latin_library:suetonius_vespasian"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "idus",
+      "confidence": 0.78875,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_6"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "atrium",
+      "confidence": 0.7879999999999999,
+      "sources_count": 11,
+      "sources": [
+        "latin_library:varro_ll_5",
+        "latin_library:varro_ll_8",
+        "latin_library:isidore_15",
+        "latin_library:suetonius_caligula",
+        "latin_library:suetonius_vespasian"
+      ],
+      "methods": [
+        "LOANWORD_ANALYSIS",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Known loan: atrium"
+      ],
+      "meaning": "main hall"
+    },
+    {
+      "word": "ephesina",
+      "confidence": 0.7814,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_6"
+      ],
+      "methods": [
+        "LEMNIAN_PARALLEL",
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Lemnian: e\u03c6te\u0161io",
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "auxilia",
+      "confidence": 0.7712499999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_5"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "clamor",
+      "confidence": 0.7712499999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_9"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "harena",
+      "confidence": 0.7675500000000001,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:suetonius_caligula",
+        "latin_library:livy_44"
+      ],
+      "methods": [
+        "LEMNIAN_PARALLEL",
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena",
+        "Lemnian: haralio"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "marrucina",
+      "confidence": 0.7675500000000001,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_44"
+      ],
+      "methods": [
+        "LEMNIAN_PARALLEL",
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Lemnian: mara\u015bm",
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "scaena",
+      "confidence": 0.7607,
+      "sources_count": 8,
+      "sources": [
+        "latin_library:varro_ll_5",
+        "latin_library:varro_ll_7",
+        "latin_library:varro_ll_10",
+        "latin_library:solinus_mommsen2",
+        "latin_library:solinus_1a"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "ETYMOLOGY_DETECTION",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "phoenice",
+      "confidence": 0.7599499999999999,
+      "sources_count": 10,
+      "sources": [
+        "latin_library:varro_ll_5",
+        "latin_library:festus",
+        "latin_library:isidore_9",
+        "latin_library:isidore_14",
+        "latin_library:isidore_15"
+      ],
+      "methods": [
+        "LEMNIAN_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Lemnian: \u03c6okiasiale"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "semine",
+      "confidence": 0.7500999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_5"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "opertione",
+      "confidence": 0.7500999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_5"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "aratro",
+      "confidence": 0.7477999999999999,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:varro_ll_5",
+        "latin_library:isidore_15"
+      ],
+      "methods": [
+        "LEMNIAN_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Lemnian: arai"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "martyres",
+      "confidence": 0.7477999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_7"
+      ],
+      "methods": [
+        "LEMNIAN_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Lemnian: mara\u015bm"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "mortuus",
+      "confidence": 0.7477999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_8"
+      ],
+      "methods": [
+        "LEMNIAN_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Lemnian: morail"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "mari",
+      "confidence": 0.7477999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_13"
+      ],
+      "methods": [
+        "LEMNIAN_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Lemnian: mara\u015bm"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "catena",
+      "confidence": 0.73175,
+      "sources_count": 4,
+      "sources": [
+        "latin_library:isidore_10",
+        "latin_library:isidore_19",
+        "latin_library:suetonius_rhetoribus",
+        "latin_library:livy_35"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "LOANWORD_ANALYSIS",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena",
+        "Known loan: catena"
+      ],
+      "meaning": "chain"
+    },
+    {
+      "word": "tris",
+      "confidence": 0.7303999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_7"
+      ],
+      "methods": [
+        "ETYMOLOGY_DETECTION",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "oratione",
+      "confidence": 0.7286875,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_7"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "ETYMOLOGY_DETECTION",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "mane",
+      "confidence": 0.7286875,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_9"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "ETYMOLOGY_DETECTION",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "theoxena",
+      "confidence": 0.7265,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_40"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "intestina",
+      "confidence": 0.7264999999999999,
+      "sources_count": 14,
+      "sources": [
+        "latin_library:isidore_4",
+        "latin_library:isidore_11",
+        "latin_library:isidore_15",
+        "latin_library:suetonius_galba",
+        "latin_library:suetonius_vespasian"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "lavantemne",
+      "confidence": 0.7264999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:suetonius_domitian"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "praenestina",
+      "confidence": 0.7264999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:suetonius_domitian"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "finitimis",
+      "confidence": 0.7264999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_1"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "hesterna",
+      "confidence": 0.7264999999999999,
+      "sources_count": 3,
+      "sources": [
+        "latin_library:livy_1",
+        "latin_library:livy_2",
+        "latin_library:livy_10"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "crastina",
+      "confidence": 0.7264999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_3"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "tromentina",
+      "confidence": 0.7264999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_6"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "consules",
+      "confidence": 0.7264999999999999,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:livy_8",
+        "latin_library:livy_10"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "sponsione",
+      "confidence": 0.7264999999999999,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:livy_9",
+        "latin_library:livy_39"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "copiis",
+      "confidence": 0.7264999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_10"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "consul",
+      "confidence": 0.7264999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_10"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "praetore",
+      "confidence": 0.7264999999999999,
+      "sources_count": 3,
+      "sources": [
+        "latin_library:livy_25",
+        "latin_library:livy_27",
+        "latin_library:livy_37"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "terentius",
+      "confidence": 0.7264999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_27"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "thalna",
+      "confidence": 0.7264999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_34"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "crustumina",
+      "confidence": 0.7264999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_42"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "tisapherne",
+      "confidence": 0.7224999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:ampelius"
+      ],
+      "methods": [
+        "LEMNIAN_PARALLEL",
+        "RAETIC_PARALLEL",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne",
+        "Lemnian: tis"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "sutrium",
+      "confidence": 0.72125,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_9"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "coepta",
+      "confidence": 0.72125,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_27"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "marina",
+      "confidence": 0.7158,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_12"
+      ],
+      "methods": [
+        "LEMNIAN_PARALLEL",
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Lemnian: mara\u015bm",
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "iscurra",
+      "confidence": 0.7149999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_10"
+      ],
+      "methods": [
+        "ETYMOLOGY_DETECTION",
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "sicarius",
+      "confidence": 0.7149999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_10"
+      ],
+      "methods": [
+        "ETYMOLOGY_DETECTION",
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "palaestinae",
+      "confidence": 0.7149999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_14"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "graece",
+      "confidence": 0.7149999999999999,
+      "sources_count": 3,
+      "sources": [
+        "latin_library:isidore_14",
+        "latin_library:isidore_17",
+        "latin_library:isidore_19"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN",
+        "ETYMOLOGY_DETECTION"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "amphora",
+      "confidence": 0.7149999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_16"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "alnus",
+      "confidence": 0.7149999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_17"
+      ],
+      "methods": [
+        "ETYMOLOGY_DETECTION",
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "lana",
+      "confidence": 0.7107,
+      "sources_count": 4,
+      "sources": [
+        "latin_library:varro_ll_5",
+        "latin_library:varro_ll_7",
+        "latin_library:varro_ll_9",
+        "latin_library:isidore_19"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "lucina",
+      "confidence": 0.7107,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_5"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "femina",
+      "confidence": 0.7107,
+      "sources_count": 7,
+      "sources": [
+        "latin_library:varro_ll_5",
+        "latin_library:varro_ll_7",
+        "latin_library:varro_ll_8",
+        "latin_library:varro_ll_9",
+        "latin_library:isidore_8"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "perpenna",
+      "confidence": 0.7107,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:varro_ll_8",
+        "latin_library:varro_ll_10"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "terna",
+      "confidence": 0.7107,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:varro_ll_8",
+        "latin_library:varro_ll_9"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "vina",
+      "confidence": 0.7107,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:varro_ll_9",
+        "latin_library:isidore_20"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "semina",
+      "confidence": 0.7068,
+      "sources_count": 3,
+      "sources": [
+        "latin_library:varro_ll_5",
+        "latin_library:isidore_16",
+        "latin_library:isidore_17"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "venena",
+      "confidence": 0.7068,
+      "sources_count": 3,
+      "sources": [
+        "latin_library:isidore_8",
+        "latin_library:isidore_12",
+        "latin_library:isidore_17"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "male",
+      "confidence": 0.7068,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_10"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: la\u015banuale"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "commune",
+      "confidence": 0.7068,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_15"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "lapsana",
+      "confidence": 0.7068,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_17"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "colena",
+      "confidence": 0.7068,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_17"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "certamina",
+      "confidence": 0.7068,
+      "sources_count": 4,
+      "sources": [
+        "latin_library:isidore_18",
+        "latin_library:livy_2",
+        "latin_library:livy_3",
+        "latin_library:livy_4"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "romanas",
+      "confidence": 0.69965,
+      "sources_count": 26,
+      "sources": [
+        "latin_library:festus",
+        "latin_library:solinus_mommsen2",
+        "latin_library:solinus_3a",
+        "latin_library:suetonius_virgil",
+        "latin_library:livy_1"
+      ],
+      "methods": [
+        "LEMNIAN_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Lemnian: rom"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "maronitas",
+      "confidence": 0.69965,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:livy_31",
+        "latin_library:livy_39"
+      ],
+      "methods": [
+        "LEMNIAN_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Lemnian: mara\u015bm"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "lanista",
+      "confidence": 0.697,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_10"
+      ],
+      "methods": [
+        "LOANWORD_ANALYSIS",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Known loan: lanista"
+      ],
+      "meaning": "gladiator trainer"
+    },
+    {
+      "word": "transalpina",
+      "confidence": 0.695,
+      "sources_count": 3,
+      "sources": [
+        "latin_library:isidore_14",
+        "latin_library:solinus_mommsen2",
+        "latin_library:solinus_1a"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "crystallina",
+      "confidence": 0.695,
+      "sources_count": 3,
+      "sources": [
+        "latin_library:isidore_16",
+        "latin_library:solinus_mommsen2",
+        "latin_library:solinus_1a"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "interna",
+      "confidence": 0.695,
+      "sources_count": 3,
+      "sources": [
+        "latin_library:isidore_18",
+        "latin_library:solinus_mommsen2",
+        "latin_library:solinus_3a"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "scamna",
+      "confidence": 0.695,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:isidore_20",
+        "latin_library:donatus"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "ustrina",
+      "confidence": 0.695,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:solinus_mommsen2",
+        "latin_library:solinus_2a"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "centurias",
+      "confidence": 0.6944,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_1"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "positione",
+      "confidence": 0.6911999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_15"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "ETYMOLOGY_DETECTION",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "ephesi",
+      "confidence": 0.691,
+      "sources_count": 3,
+      "sources": [
+        "latin_library:varro_ll_8",
+        "latin_library:livy_36",
+        "latin_library:livy_37"
+      ],
+      "methods": [
+        "LEMNIAN_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Lemnian: e\u03c6te\u0161io"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "penetrale",
+      "confidence": 0.6906999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_41"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: la\u015banuale"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "scansione",
+      "confidence": 0.6894999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_5"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "decuma",
+      "confidence": 0.6894999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_6"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "conspicione",
+      "confidence": 0.6894999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_7"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "reprehensione",
+      "confidence": 0.6894999999999999,
+      "sources_count": 3,
+      "sources": [
+        "latin_library:varro_ll_8",
+        "latin_library:varro_ll_9",
+        "latin_library:livy_38"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "martyria",
+      "confidence": 0.6821999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_7"
+      ],
+      "methods": [
+        "LEMNIAN_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Lemnian: mara\u015bm"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "marinas",
+      "confidence": 0.68115,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_7"
+      ],
+      "methods": [
+        "LEMNIAN_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Lemnian: mara\u015bm"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "osce",
+      "confidence": 0.6804,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_5"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "radices",
+      "confidence": 0.6804,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_5"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "ETYMOLOGY_DETECTION"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "sola",
+      "confidence": 0.6804,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_5"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "liber",
+      "confidence": 0.6804,
+      "sources_count": 6,
+      "sources": [
+        "latin_library:varro_ll_5",
+        "latin_library:varro_ll_6",
+        "latin_library:varro_ll_7",
+        "latin_library:varro_ll_8",
+        "latin_library:varro_ll_9"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "ETYMOLOGY_DETECTION"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "supremum",
+      "confidence": 0.6804,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_7"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "sinistra",
+      "confidence": 0.6804,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_7"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "huius",
+      "confidence": 0.6804,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_8"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "oportere",
+      "confidence": 0.6804,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_9"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "simile",
+      "confidence": 0.6804,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_9"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "casus",
+      "confidence": 0.6804,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_9"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "lucumo",
+      "confidence": 0.6802,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_1"
+      ],
+      "methods": [
+        "LOANWORD_ANALYSIS",
+        "FOREIGN_WORD_NER"
+      ],
+      "cross_linguistic_support": [
+        "Known loan: lucumo"
+      ],
+      "meaning": "Etruscan chief/king"
+    },
+    {
+      "word": "spurius",
+      "confidence": 0.6799999999999999,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:isidore_9",
+        "latin_library:ampelius"
+      ],
+      "methods": [
+        "LOANWORD_ANALYSIS",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Known loan: spurius"
+      ],
+      "meaning": "illegitimate"
+    },
+    {
+      "word": "similitudine",
+      "confidence": 0.6786875,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_6"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "ETYMOLOGY_DETECTION"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "pale",
+      "confidence": 0.6786875,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_6"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "ETYMOLOGY_DETECTION",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: la\u015banuale"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "natus",
+      "confidence": 0.6765,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:suetonius_persius"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "timentes",
+      "confidence": 0.6765,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_4"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "frons",
+      "confidence": 0.6765,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_5"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "invenere",
+      "confidence": 0.6765,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_6"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "adversus",
+      "confidence": 0.6765,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_10"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "eos",
+      "confidence": 0.6765,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_10"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "profectos",
+      "confidence": 0.6765,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_10"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "fabius",
+      "confidence": 0.6765,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_10"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "hibernis",
+      "confidence": 0.6765,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_21"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "apulia",
+      "confidence": 0.6765,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_27"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "fuga",
+      "confidence": 0.6765,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_27"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "fregellani",
+      "confidence": 0.6765,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_27"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "cui",
+      "confidence": 0.6765,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_31"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "gallia",
+      "confidence": 0.6765,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_31"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "propraetori",
+      "confidence": 0.6765,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_37"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "propraetor",
+      "confidence": 0.6765,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_37"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "mundus",
+      "confidence": 0.6739999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_3"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "LOANWORD_ANALYSIS",
+        "ETYMOLOGY_DETECTION"
+      ],
+      "cross_linguistic_support": [
+        "Known loan: mundus"
+      ],
+      "meaning": "ritual pit (also 'world')"
+    },
+    {
+      "word": "falsitas",
+      "confidence": 0.6739999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_5"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "antiphona",
+      "confidence": 0.6739999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_6"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "trinitas",
+      "confidence": 0.6739999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_7"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "scena",
+      "confidence": 0.6739999999999999,
+      "sources_count": 3,
+      "sources": [
+        "latin_library:isidore_10",
+        "latin_library:isidore_18",
+        "latin_library:suetonius_virgil"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "spina",
+      "confidence": 0.6739999999999999,
+      "sources_count": 4,
+      "sources": [
+        "latin_library:isidore_11",
+        "latin_library:isidore_12",
+        "latin_library:solinus_mommsen2",
+        "latin_library:solinus_3a"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "italiae",
+      "confidence": 0.6739999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_14"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "hispaniae",
+      "confidence": 0.6739999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_14"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "aethna",
+      "confidence": 0.6739999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_14"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "septentrione",
+      "confidence": 0.6739999999999999,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:isidore_14",
+        "latin_library:livy_38"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "vitrum",
+      "confidence": 0.6739999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_16"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "vitis",
+      "confidence": 0.6739999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_17"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "latinis",
+      "confidence": 0.6739999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_17"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "acanthina",
+      "confidence": 0.6739999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_17"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "lentiscina",
+      "confidence": 0.6739999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_17"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "victoria",
+      "confidence": 0.6739999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_18"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "transvenas",
+      "confidence": 0.6739999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_18"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "atramentum",
+      "confidence": 0.6739999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_19"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "vela",
+      "confidence": 0.6739999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_19"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "vitta",
+      "confidence": 0.6739999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_19"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "calciamenta",
+      "confidence": 0.6739999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_19"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "iacinthina",
+      "confidence": 0.6739999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_19"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "antemna",
+      "confidence": 0.6739999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_19"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "transenna",
+      "confidence": 0.6739999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_19"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "inde",
+      "confidence": 0.6739999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_20"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN",
+        "ETYMOLOGY_DETECTION"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "fictilia",
+      "confidence": 0.6739999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_20"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "rota",
+      "confidence": 0.6739999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_20"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "pueros",
+      "confidence": 0.6728,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_1"
+      ],
+      "methods": [
+        "ETYMOLOGY_DETECTION",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "minus",
+      "confidence": 0.6728,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_34"
+      ],
+      "methods": [
+        "ETYMOLOGY_DETECTION",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "maritimas",
+      "confidence": 0.6723,
+      "sources_count": 5,
+      "sources": [
+        "latin_library:festus",
+        "latin_library:livy_35",
+        "latin_library:livy_37",
+        "latin_library:livy_42",
+        "latin_library:livy_45"
+      ],
+      "methods": [
+        "LEMNIAN_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Lemnian: mara\u015bm"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "se",
+      "confidence": 0.6712499999999999,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:livy_6",
+        "latin_library:livy_9"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "deserti",
+      "confidence": 0.6712499999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_27"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "phocenses",
+      "confidence": 0.6712499999999999,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:livy_33",
+        "latin_library:livy_34"
+      ],
+      "methods": [
+        "LEMNIAN_PARALLEL",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Lemnian: \u03c6okiasiale"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "phocaeensis",
+      "confidence": 0.6712499999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_37"
+      ],
+      "methods": [
+        "LEMNIAN_PARALLEL",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Lemnian: \u03c6okiasiale"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "phoenicunta",
+      "confidence": 0.6712499999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_37"
+      ],
+      "methods": [
+        "LEMNIAN_PARALLEL",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Lemnian: \u03c6okiasiale"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "phocas",
+      "confidence": 0.6695,
+      "sources_count": 4,
+      "sources": [
+        "latin_library:isidore_5",
+        "latin_library:isidore_13",
+        "latin_library:solinus_mommsen2",
+        "latin_library:solinus_2a"
+      ],
+      "methods": [
+        "LEMNIAN_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Lemnian: \u03c6okiasiale"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "harenas",
+      "confidence": 0.6695,
+      "sources_count": 4,
+      "sources": [
+        "latin_library:solinus_mommsen2",
+        "latin_library:solinus_2a",
+        "latin_library:solinus_3a",
+        "latin_library:livy_22"
+      ],
+      "methods": [
+        "LEMNIAN_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Lemnian: haralio"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "spes",
+      "confidence": 0.6649999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_8"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "ita",
+      "confidence": 0.6649999999999999,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:isidore_12",
+        "latin_library:isidore_17"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "deserta",
+      "confidence": 0.6649999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_14"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "lentis",
+      "confidence": 0.6649999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_17"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "citocacia",
+      "confidence": 0.6649999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_17"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "pastinaca",
+      "confidence": 0.6649999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_17"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "rubrica",
+      "confidence": 0.6649999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_19"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "lumbare",
+      "confidence": 0.6649999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_19"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN",
+        "ETYMOLOGY_DETECTION"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "tinctura",
+      "confidence": 0.6649999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_19"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "animal",
+      "confidence": 0.6584,
+      "sources_count": 8,
+      "sources": [
+        "latin_library:varro_ll_5",
+        "latin_library:isidore_8",
+        "latin_library:isidore_11",
+        "latin_library:isidore_12",
+        "latin_library:solinus_mommsen2"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "ETYMOLOGY_DETECTION",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: lemnal"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "scobina",
+      "confidence": 0.6559999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_19"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "humana",
+      "confidence": 0.6548999999999999,
+      "sources_count": 10,
+      "sources": [
+        "latin_library:varro_ll_5",
+        "latin_library:varro_ll_8",
+        "latin_library:varro_ll_10",
+        "latin_library:isidore_5",
+        "latin_library:isidore_7"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "corona",
+      "confidence": 0.6548999999999999,
+      "sources_count": 5,
+      "sources": [
+        "latin_library:varro_ll_5",
+        "latin_library:livy_4",
+        "latin_library:livy_7",
+        "latin_library:livy_23",
+        "latin_library:livy_42"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "fortuna",
+      "confidence": 0.6548999999999999,
+      "sources_count": 36,
+      "sources": [
+        "latin_library:varro_ll_5",
+        "latin_library:varro_ll_7",
+        "latin_library:festus",
+        "latin_library:solinus_mommsen2",
+        "latin_library:livy_1"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "aliena",
+      "confidence": 0.6548999999999999,
+      "sources_count": 3,
+      "sources": [
+        "latin_library:varro_ll_5",
+        "latin_library:isidore_5",
+        "latin_library:livy_30"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "ruina",
+      "confidence": 0.6548999999999999,
+      "sources_count": 3,
+      "sources": [
+        "latin_library:varro_ll_7",
+        "latin_library:solinus_mommsen2",
+        "latin_library:livy_44"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "crimina",
+      "confidence": 0.6548999999999999,
+      "sources_count": 4,
+      "sources": [
+        "latin_library:varro_ll_9",
+        "latin_library:livy_34",
+        "latin_library:livy_39",
+        "latin_library:livy_42"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "nocturna",
+      "confidence": 0.6548999999999999,
+      "sources_count": 3,
+      "sources": [
+        "latin_library:festus",
+        "latin_library:livy_40",
+        "latin_library:livy_42"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "volumina",
+      "confidence": 0.6548999999999999,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:isidore_6",
+        "latin_library:suetonius_grammaticis"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "plena",
+      "confidence": 0.6548999999999999,
+      "sources_count": 3,
+      "sources": [
+        "latin_library:isidore_14",
+        "latin_library:isidore_17",
+        "latin_library:livy_22"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "machina",
+      "confidence": 0.6548999999999999,
+      "sources_count": 4,
+      "sources": [
+        "latin_library:isidore_18",
+        "latin_library:isidore_19",
+        "latin_library:isidore_20",
+        "latin_library:livy_39"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "messalina",
+      "confidence": 0.6548999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:suetonius_claudius"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "porsenna",
+      "confidence": 0.6548999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_2"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "porsinna",
+      "confidence": 0.6548999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_2"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "annona",
+      "confidence": 0.6548999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_2"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "externa",
+      "confidence": 0.6548999999999999,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:livy_2",
+        "latin_library:livy_7"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "uana",
+      "confidence": 0.6548999999999999,
+      "sources_count": 4,
+      "sources": [
+        "latin_library:livy_24",
+        "latin_library:livy_36",
+        "latin_library:livy_37",
+        "latin_library:livy_42"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "henna",
+      "confidence": 0.6548999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_24"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "iamphorynna",
+      "confidence": 0.6548999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_26"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "tarentina",
+      "confidence": 0.6548999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_26"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "stena",
+      "confidence": 0.6548999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_32"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "zmyrna",
+      "confidence": 0.6548999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_35"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "opportuna",
+      "confidence": 0.6548999999999999,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:livy_35",
+        "latin_library:livy_42"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "fraterna",
+      "confidence": 0.6548999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_40"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "reperiri",
+      "confidence": 0.6515999999999998,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_8"
+      ],
+      "methods": [
+        "ETYMOLOGY_DETECTION",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "mulus",
+      "confidence": 0.6515999999999998,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_9"
+      ],
+      "methods": [
+        "ETYMOLOGY_DETECTION",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "dotine",
+      "confidence": 0.6500999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_5"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "martias",
+      "confidence": 0.6494,
+      "sources_count": 11,
+      "sources": [
+        "latin_library:isidore_6",
+        "latin_library:suetonius_caesar",
+        "latin_library:livy_25",
+        "latin_library:livy_30",
+        "latin_library:livy_34"
+      ],
+      "methods": [
+        "LEMNIAN_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Lemnian: mara\u015bm"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "aras",
+      "confidence": 0.6494,
+      "sources_count": 10,
+      "sources": [
+        "latin_library:isidore_15",
+        "latin_library:solinus_mommsen2",
+        "latin_library:solinus_1a",
+        "latin_library:solinus_3a",
+        "latin_library:suetonius_caesar"
+      ],
+      "methods": [
+        "LEMNIAN_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Lemnian: arai"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "sacas",
+      "confidence": 0.6439999999999999,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:solinus_mommsen2",
+        "latin_library:solinus_4a"
+      ],
+      "methods": [
+        "ETYMOLOGY_DETECTION",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "lucerna",
+      "confidence": 0.6417499999999999,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:varro_ll_5",
+        "latin_library:varro_ll_9"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "proserpina",
+      "confidence": 0.6417499999999999,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:varro_ll_5",
+        "latin_library:ampelius"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "fiscina",
+      "confidence": 0.6417499999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_5"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "sutrina",
+      "confidence": 0.6417499999999999,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:varro_ll_5",
+        "latin_library:varro_ll_8"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "perna",
+      "confidence": 0.6417499999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_5"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "aeterna",
+      "confidence": 0.6417499999999999,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:varro_ll_5",
+        "latin_library:varro_ll_6"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "iuturna",
+      "confidence": 0.6417499999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_5"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "urna",
+      "confidence": 0.6417499999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_5"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "proportione",
+      "confidence": 0.6417499999999999,
+      "sources_count": 4,
+      "sources": [
+        "latin_library:varro_ll_5",
+        "latin_library:varro_ll_8",
+        "latin_library:varro_ll_9",
+        "latin_library:varro_ll_10"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "pruina",
+      "confidence": 0.6417499999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_6"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "runcina",
+      "confidence": 0.6417499999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_6"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "pronomina",
+      "confidence": 0.6417499999999999,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:varro_ll_8",
+        "latin_library:donatus"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "percelna",
+      "confidence": 0.6417499999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_8"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "arverna",
+      "confidence": 0.6417499999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_8"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "piscina",
+      "confidence": 0.6417499999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_9"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "praenomina",
+      "confidence": 0.6417499999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_9"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "trina",
+      "confidence": 0.6417499999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_9"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "offensione",
+      "confidence": 0.6417499999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_9"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "inconcinna",
+      "confidence": 0.6417499999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_10"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "spurinna",
+      "confidence": 0.6417499999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_10"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "elevatione",
+      "confidence": 0.6411999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_3"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "piutone",
+      "confidence": 0.6411999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_5"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "plutone",
+      "confidence": 0.6411999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_5"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "mene",
+      "confidence": 0.6411999999999999,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:isidore_6",
+        "latin_library:isidore_11"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "bal",
+      "confidence": 0.6411999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_8"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "ETYMOLOGY_DETECTION"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: lemnal"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "kurne",
+      "confidence": 0.6411999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_14"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "pene",
+      "confidence": 0.6411999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_15"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "coacervatione",
+      "confidence": 0.6411999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_15"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "athene",
+      "confidence": 0.6411999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_15"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "controversias",
+      "confidence": 0.641,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_5"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "nostra",
+      "confidence": 0.641,
+      "sources_count": 3,
+      "sources": [
+        "latin_library:varro_ll_5",
+        "latin_library:varro_ll_6",
+        "latin_library:varro_ll_8"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "nostri",
+      "confidence": 0.641,
+      "sources_count": 3,
+      "sources": [
+        "latin_library:varro_ll_5",
+        "latin_library:varro_ll_6",
+        "latin_library:varro_ll_7"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "scripta",
+      "confidence": 0.641,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_5"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "princeps",
+      "confidence": 0.641,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:varro_ll_5",
+        "latin_library:festus"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "principes",
+      "confidence": 0.641,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_5"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "castris",
+      "confidence": 0.641,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_5"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "scriptores",
+      "confidence": 0.641,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_6"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "menstruas",
+      "confidence": 0.641,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_6"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "principia",
+      "confidence": 0.641,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_6"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "sponte",
+      "confidence": 0.641,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_6"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "sponsu",
+      "confidence": 0.641,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_6"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "pronuntiare",
+      "confidence": 0.641,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_6"
+      ],
+      "methods": [
+        "ETYMOLOGY_DETECTION",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "monstris",
+      "confidence": 0.641,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_7"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "intempesta",
+      "confidence": 0.641,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_7"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "transversus",
+      "confidence": 0.641,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_7"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "extrinsecus",
+      "confidence": 0.641,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_8"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "contraria",
+      "confidence": 0.641,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_8"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "praesenti",
+      "confidence": 0.641,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_9"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "transitu",
+      "confidence": 0.641,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_10"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "phocaenses",
+      "confidence": 0.6375,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:solinus_mommsen2",
+        "latin_library:solinus_1a"
+      ],
+      "methods": [
+        "LEMNIAN_PARALLEL",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Lemnian: \u03c6okiasiale"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "haruspice",
+      "confidence": 0.6369999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:suetonius_caesar"
+      ],
+      "methods": [
+        "LEMNIAN_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Lemnian: haralio"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "strenua",
+      "confidence": 0.6369999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_8"
+      ],
+      "methods": [
+        "ETYMOLOGY_DETECTION",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "haruspices",
+      "confidence": 0.6369999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_42"
+      ],
+      "methods": [
+        "LEMNIAN_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Lemnian: haralio"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "centena",
+      "confidence": 0.6334999999999998,
+      "sources_count": 4,
+      "sources": [
+        "latin_library:festus",
+        "latin_library:solinus_mommsen2",
+        "latin_library:solinus_1a",
+        "latin_library:solinus_4a"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "palaestina",
+      "confidence": 0.6334999999999998,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:festus",
+        "latin_library:isidore_14"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "provincias",
+      "confidence": 0.632,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:festus"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "proconsul",
+      "confidence": 0.632,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:festus"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "trans",
+      "confidence": 0.632,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:festus"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "provincia",
+      "confidence": 0.632,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:festus"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "provinciae",
+      "confidence": 0.632,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:festus"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "principe",
+      "confidence": 0.632,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:festus"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "castra",
+      "confidence": 0.632,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:festus"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "myraina",
+      "confidence": 0.6319,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_5"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "leaena",
+      "confidence": 0.6319,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:varro_ll_5",
+        "latin_library:isidore_12"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "toral",
+      "confidence": 0.6319,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_5"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: lemnal"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "culina",
+      "confidence": 0.6319,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_5"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "termona",
+      "confidence": 0.6319,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_5"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "lucana",
+      "confidence": 0.6319,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_5"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "lacuna",
+      "confidence": 0.6319,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_5"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "laena",
+      "confidence": 0.6319,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_5"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "furrina",
+      "confidence": 0.6319,
+      "sources_count": 3,
+      "sources": [
+        "latin_library:varro_ll_5",
+        "latin_library:varro_ll_6",
+        "latin_library:varro_ll_7"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "vicina",
+      "confidence": 0.6319,
+      "sources_count": 3,
+      "sources": [
+        "latin_library:varro_ll_5",
+        "latin_library:varro_ll_6",
+        "latin_library:isidore_14"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "palatina",
+      "confidence": 0.6319,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_5"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "farina",
+      "confidence": 0.6319,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_5"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "rana",
+      "confidence": 0.6319,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_5"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "farcimina",
+      "confidence": 0.6319,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_5"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "muraena",
+      "confidence": 0.6319,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:varro_ll_5",
+        "latin_library:varro_ll_9"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "fana",
+      "confidence": 0.6319,
+      "sources_count": 3,
+      "sources": [
+        "latin_library:varro_ll_5",
+        "latin_library:varro_ll_6",
+        "latin_library:isidore_15"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "ETYMOLOGY_DETECTION",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "capital",
+      "confidence": 0.6319,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_5"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: lemnal"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "collina",
+      "confidence": 0.6319,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_5"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "vesana",
+      "confidence": 0.6319,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_6"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "camena",
+      "confidence": 0.6319,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:varro_ll_6",
+        "latin_library:varro_ll_7"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "hermiona",
+      "confidence": 0.6319,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_6"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "aiona",
+      "confidence": 0.6319,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_6"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "latona",
+      "confidence": 0.6319,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_7"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "casmena",
+      "confidence": 0.6319,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_7"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "casina",
+      "confidence": 0.6319,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_7"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "pomona",
+      "confidence": 0.6319,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_7"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "carmena",
+      "confidence": 0.6319,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_7"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "oriona",
+      "confidence": 0.6319,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_7"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "fauna",
+      "confidence": 0.6319,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_7"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "aesiona",
+      "confidence": 0.6319,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_7"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "cortina",
+      "confidence": 0.6319,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_7"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "iona",
+      "confidence": 0.6319,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_8"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "pellesuina",
+      "confidence": 0.6319,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_8"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "laniena",
+      "confidence": 0.6319,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_8"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "helena",
+      "confidence": 0.6319,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_8"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "alfena",
+      "confidence": 0.6319,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_8"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "salina",
+      "confidence": 0.6319,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_8"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "sisenna",
+      "confidence": 0.6319,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_8"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "flumina",
+      "confidence": 0.6319,
+      "sources_count": 6,
+      "sources": [
+        "latin_library:varro_ll_9",
+        "latin_library:isidore_13",
+        "latin_library:isidore_14",
+        "latin_library:isidore_16",
+        "latin_library:solinus_mommsen2"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "asina",
+      "confidence": 0.6319,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_9"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "novena",
+      "confidence": 0.6319,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_9"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "caecina",
+      "confidence": 0.6319,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_10"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "mina",
+      "confidence": 0.63175,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_16"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "ETYMOLOGY_DETECTION",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "templum",
+      "confidence": 0.6304,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_6"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "proinde",
+      "confidence": 0.6304,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_6"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "dicta",
+      "confidence": 0.6304,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_7"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "utrumque",
+      "confidence": 0.6304,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_8"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "debuisse",
+      "confidence": 0.6304,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_8"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "marsyas",
+      "confidence": 0.62805,
+      "sources_count": 3,
+      "sources": [
+        "latin_library:solinus_mommsen2",
+        "latin_library:solinus_4a",
+        "latin_library:livy_38"
+      ],
+      "methods": [
+        "LEMNIAN_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Lemnian: mara\u015bm"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "moras",
+      "confidence": 0.62805,
+      "sources_count": 4,
+      "sources": [
+        "latin_library:suetonius_caesar",
+        "latin_library:suetonius_otho",
+        "latin_library:livy_7",
+        "latin_library:livy_31"
+      ],
+      "methods": [
+        "LEMNIAN_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Lemnian: morail"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "morituras",
+      "confidence": 0.62805,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:suetonius_grammaticis"
+      ],
+      "methods": [
+        "LEMNIAN_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Lemnian: morail"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "vanas",
+      "confidence": 0.62805,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:livy_3",
+        "latin_library:livy_4"
+      ],
+      "methods": [
+        "LEMNIAN_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Lemnian: vanala"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "marmoreas",
+      "confidence": 0.62805,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_27"
+      ],
+      "methods": [
+        "LEMNIAN_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Lemnian: mara\u015bm"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "maritas",
+      "confidence": 0.62805,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_27"
+      ],
+      "methods": [
+        "LEMNIAN_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Lemnian: mara\u015bm"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "troiana",
+      "confidence": 0.627,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:solinus_mommsen2",
+        "latin_library:solinus_1a"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "mothona",
+      "confidence": 0.627,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:solinus_mommsen2",
+        "latin_library:solinus_1a"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "prona",
+      "confidence": 0.627,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:solinus_mommsen2"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "aetna",
+      "confidence": 0.627,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:solinus_mommsen2",
+        "latin_library:solinus_1a"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "columpna",
+      "confidence": 0.627,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:ampelius"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "utrumne",
+      "confidence": 0.6265,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:suetonius_caesar"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "interpretatione",
+      "confidence": 0.6265,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:suetonius_caesar"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "proscriptione",
+      "confidence": 0.6265,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:suetonius_caesar"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "consternatione",
+      "confidence": 0.6265,
+      "sources_count": 3,
+      "sources": [
+        "latin_library:suetonius_caesar",
+        "latin_library:suetonius_claudius",
+        "latin_library:livy_37"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "conspiratione",
+      "confidence": 0.6265,
+      "sources_count": 3,
+      "sources": [
+        "latin_library:suetonius_caligula",
+        "latin_library:suetonius_domitian",
+        "latin_library:livy_3"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "internecione",
+      "confidence": 0.6265,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:suetonius_otho"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "inscriptione",
+      "confidence": 0.6265,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:suetonius_vitellius"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "lustrale",
+      "confidence": 0.6265,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:livy_1",
+        "latin_library:livy_40"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: la\u015banuale"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "instauratione",
+      "confidence": 0.6265,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_2"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "tenerenturne",
+      "confidence": 0.6265,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_3"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "inritaverint",
+      "confidence": 0.6265,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_5"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "etruscisne",
+      "confidence": 0.6265,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_5"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "ostentatione",
+      "confidence": 0.6265,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_7"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "sterne",
+      "confidence": 0.6265,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_7"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "oritur",
+      "confidence": 0.6265,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_9"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "obsidebatur",
+      "confidence": 0.6265,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_9"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "traherentne",
+      "confidence": 0.6265,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_9"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "gestae",
+      "confidence": 0.6265,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_10"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "transitione",
+      "confidence": 0.6265,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:livy_22",
+        "latin_library:livy_28"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "crispine",
+      "confidence": 0.6265,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_25"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "aquilius",
+      "confidence": 0.6265,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_27"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "uarro",
+      "confidence": 0.6265,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_27"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "frustratione",
+      "confidence": 0.6265,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_27"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "escensione",
+      "confidence": 0.6265,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_27"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "numistrone",
+      "confidence": 0.6265,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_27"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "sucronemne",
+      "confidence": 0.6265,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_28"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "satelles",
+      "confidence": 0.6265,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_34"
+      ],
+      "methods": [
+        "LOANWORD_ANALYSIS",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Known loan: satelles"
+      ],
+      "meaning": "attendant, bodyguard"
+    },
+    {
+      "word": "ignobilis",
+      "confidence": 0.6265,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_39"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "constitutione",
+      "confidence": 0.6265,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_39"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "lustratione",
+      "confidence": 0.6265,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_40"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "triumphantemne",
+      "confidence": 0.6265,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_42"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "strymone",
+      "confidence": 0.6265,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_44"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "priuatumne",
+      "confidence": 0.6265,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_45"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "vocari",
+      "confidence": 0.6247999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_3"
+      ],
+      "methods": [
+        "ETYMOLOGY_DETECTION",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "nuntii",
+      "confidence": 0.6247999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_7"
+      ],
+      "methods": [
+        "ETYMOLOGY_DETECTION",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "christus",
+      "confidence": 0.6247999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_7"
+      ],
+      "methods": [
+        "ETYMOLOGY_DETECTION",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "apostoli",
+      "confidence": 0.6247999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_7"
+      ],
+      "methods": [
+        "ETYMOLOGY_DETECTION",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "ceteras",
+      "confidence": 0.6247999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_9"
+      ],
+      "methods": [
+        "ETYMOLOGY_DETECTION",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "postea",
+      "confidence": 0.6247999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_9"
+      ],
+      "methods": [
+        "ETYMOLOGY_DETECTION",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "propter",
+      "confidence": 0.6247999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_9"
+      ],
+      "methods": [
+        "ETYMOLOGY_DETECTION",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "ceteris",
+      "confidence": 0.6247999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_12"
+      ],
+      "methods": [
+        "ETYMOLOGY_DETECTION",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "loca",
+      "confidence": 0.6247999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_15"
+      ],
+      "methods": [
+        "ETYMOLOGY_DETECTION",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "pessaria",
+      "confidence": 0.624,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_4"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "incorruptibilis",
+      "confidence": 0.624,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_7"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "libya",
+      "confidence": 0.624,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_14"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "cella",
+      "confidence": 0.624,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_15"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "capitolia",
+      "confidence": 0.624,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:isidore_15",
+        "latin_library:isidore_19"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "myrrhites",
+      "confidence": 0.624,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_16"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "melichrysus",
+      "confidence": 0.624,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_16"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "vncia",
+      "confidence": 0.624,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_16"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "arista",
+      "confidence": 0.624,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_17"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "vicia",
+      "confidence": 0.624,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_17"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "graecis",
+      "confidence": 0.624,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_17"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "putant",
+      "confidence": 0.624,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_17"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "psyllios",
+      "confidence": 0.624,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_17"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "splenos",
+      "confidence": 0.624,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_17"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "lappa",
+      "confidence": 0.624,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_17"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "asplenos",
+      "confidence": 0.624,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_17"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "lactuca",
+      "confidence": 0.624,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_17"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "ruta",
+      "confidence": 0.624,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_17"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "internicione",
+      "confidence": 0.624,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_18"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "tapeta",
+      "confidence": 0.624,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_19"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "pulpa",
+      "confidence": 0.624,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_20"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "arca",
+      "confidence": 0.624,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_20"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "clavis",
+      "confidence": 0.624,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_20"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "sisaruena",
+      "confidence": 0.6238,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:festus"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "plana",
+      "confidence": 0.6238,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:festus",
+        "latin_library:isidore_3"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "novempopulana",
+      "confidence": 0.6238,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:festus"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "surena",
+      "confidence": 0.6238,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:festus"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "osroena",
+      "confidence": 0.6238,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:festus"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "lumina",
+      "confidence": 0.6238,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:festus"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "italia",
+      "confidence": 0.6228,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_21"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "uiri",
+      "confidence": 0.6228,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_28"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "phocaeenses",
+      "confidence": 0.6149999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_15"
+      ],
+      "methods": [
+        "LEMNIAN_PARALLEL",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Lemnian: \u03c6okiasiale"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "saxifraga",
+      "confidence": 0.6149999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_17"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "luce",
+      "confidence": 0.6122,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_5"
+      ],
+      "methods": [
+        "ETYMOLOGY_DETECTION",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "pinna",
+      "confidence": 0.6083999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_6"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "osanna",
+      "confidence": 0.6083999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_6"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "carmina",
+      "confidence": 0.6083999999999999,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:isidore_6",
+        "latin_library:isidore_8"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "matrona",
+      "confidence": 0.6083999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_9"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "limina",
+      "confidence": 0.6083999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_15"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "vena",
+      "confidence": 0.6083999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_16"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "emina",
+      "confidence": 0.6083999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_16"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "arena",
+      "confidence": 0.6083999999999999,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:isidore_16",
+        "latin_library:isidore_19"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "resina",
+      "confidence": 0.6083999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_17"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "canna",
+      "confidence": 0.6083999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_17"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "carina",
+      "confidence": 0.6083999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_19"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "pruna",
+      "confidence": 0.6083999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_19"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "cinna",
+      "confidence": 0.6083999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_19"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "advena",
+      "confidence": 0.6068,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_7"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: \u015btena"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "sanguine",
+      "confidence": 0.6068,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_10"
+      ],
+      "methods": [
+        "RAETIC_PARALLEL",
+        "FOREIGN_WORD_NER"
+      ],
+      "cross_linguistic_support": [
+        "Raetic: esimne"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "roma",
+      "confidence": 0.6023499999999999,
+      "sources_count": 3,
+      "sources": [
+        "latin_library:varro_ll_5",
+        "latin_library:varro_ll_8",
+        "latin_library:varro_ll_10"
+      ],
+      "methods": [
+        "LEMNIAN_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Lemnian: rom"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "marcus",
+      "confidence": 0.6023499999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_8"
+      ],
+      "methods": [
+        "LEMNIAN_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [
+        "Lemnian: mara\u015bm"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "aprunum",
+      "confidence": 0.6015999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_5"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "trapetes",
+      "confidence": 0.6015999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_5"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "proiecta",
+      "confidence": 0.6015999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_5"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "vinciri",
+      "confidence": 0.6015999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_5"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "uvescit",
+      "confidence": 0.6015999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_5"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "capi",
+      "confidence": 0.6015999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_5"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "iunctis",
+      "confidence": 0.6015999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_5"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "mattye",
+      "confidence": 0.6015999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_5"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "intervallum",
+      "confidence": 0.6015999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_6"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "lupercis",
+      "confidence": 0.6015999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_6"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "sustinet",
+      "confidence": 0.6015999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_6"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "vesper",
+      "confidence": 0.6015999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_6"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "conspicionem",
+      "confidence": 0.6015999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_7"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "saturnios",
+      "confidence": 0.6015999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_7"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "scaeptrum",
+      "confidence": 0.6015999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_7"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "scaian",
+      "confidence": 0.6015999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_7"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "tueamur",
+      "confidence": 0.6015999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_7"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "corripere",
+      "confidence": 0.6015999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_7"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "aperire",
+      "confidence": 0.6015999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_7"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "cervices",
+      "confidence": 0.6015999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_8"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "aristarchum",
+      "confidence": 0.6015999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_8"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "aves",
+      "confidence": 0.6015999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_8"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "astrologi",
+      "confidence": 0.6015999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_9"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "nos",
+      "confidence": 0.6015999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_9"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "ipsi",
+      "confidence": 0.6015999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_9"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "scipioninos",
+      "confidence": 0.6015999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_9"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "cupressus",
+      "confidence": 0.6015999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_9"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "lavi",
+      "confidence": 0.6015999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_9"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "viii",
+      "confidence": 0.58432,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_8"
+      ],
+      "methods": [
+        "ETYMOLOGY_DETECTION",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "viiii",
+      "confidence": 0.58432,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_9"
+      ],
+      "methods": [
+        "ETYMOLOGY_DETECTION",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "samnio",
+      "confidence": 0.5811999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_10"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "autem",
+      "confidence": 0.572,
+      "sources_count": 8,
+      "sources": [
+        "latin_library:isidore_3",
+        "latin_library:isidore_5",
+        "latin_library:isidore_6",
+        "latin_library:isidore_11",
+        "latin_library:isidore_14"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN",
+        "ETYMOLOGY_DETECTION"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "notatum",
+      "confidence": 0.5576,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_15"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "umbilicus",
+      "confidence": 0.54432,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_7"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "ETYMOLOGY_DETECTION"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "item",
+      "confidence": 0.54432,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_7"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "ETYMOLOGY_DETECTION"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "esset",
+      "confidence": 0.54432,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_9"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "ETYMOLOGY_DETECTION"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "extemplo",
+      "confidence": 0.5412,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_10"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "volumnium",
+      "confidence": 0.5412,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_10"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "quantum",
+      "confidence": 0.5412,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_10"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "relicto",
+      "confidence": 0.5412,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_10"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "atilio",
+      "confidence": 0.5412,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_10"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "quique",
+      "confidence": 0.5412,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_27"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "exercitum",
+      "confidence": 0.5412,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_29"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "hostem",
+      "confidence": 0.5382399999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_2"
+      ],
+      "methods": [
+        "ETYMOLOGY_DETECTION",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "agrosque",
+      "confidence": 0.5369999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_5"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "captam",
+      "confidence": 0.5369999999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_6"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "romano",
+      "confidence": 0.5364500000000001,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_31"
+      ],
+      "methods": [
+        "LEMNIAN_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "ETYMOLOGY_DETECTION"
+      ],
+      "cross_linguistic_support": [
+        "Lemnian: rom"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "vii",
+      "confidence": 0.5212799999999999,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_7"
+      ],
+      "methods": [
+        "ETYMOLOGY_DETECTION",
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "etiam",
+      "confidence": 0.50432,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_5"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "olim",
+      "confidence": 0.50432,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_6"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "divum",
+      "confidence": 0.50432,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_7"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "usum",
+      "confidence": 0.50432,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_8"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "falsum",
+      "confidence": 0.50432,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_9"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "et",
+      "confidence": 0.5012,
+      "sources_count": 3,
+      "sources": [
+        "latin_library:isidore_17",
+        "latin_library:livy_4",
+        "latin_library:livy_10"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "eo",
+      "confidence": 0.5012,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:isidore_17",
+        "latin_library:livy_31"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "trepidatum",
+      "confidence": 0.5012,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_4"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "fidemque",
+      "confidence": 0.5012,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_6"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "sit",
+      "confidence": 0.5012,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_10"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "traductumque",
+      "confidence": 0.5012,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_10"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "ut",
+      "confidence": 0.5012,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_27"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "alterum",
+      "confidence": 0.5012,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_29"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "tonitruum",
+      "confidence": 0.49920000000000003,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_13"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "aurum",
+      "confidence": 0.49920000000000003,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_16"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "vivum",
+      "confidence": 0.49920000000000003,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_16"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "aurichalcum",
+      "confidence": 0.49920000000000003,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_16"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "ferrum",
+      "confidence": 0.49920000000000003,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_16"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "plumbum",
+      "confidence": 0.49920000000000003,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_16"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "radix",
+      "confidence": 0.49920000000000003,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_17"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "virgultum",
+      "confidence": 0.49920000000000003,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_17"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "nux",
+      "confidence": 0.49920000000000003,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_17"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "apium",
+      "confidence": 0.49920000000000003,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_17"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "toga",
+      "confidence": 0.49920000000000003,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_19"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "involucrum",
+      "confidence": 0.49920000000000003,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_20"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "altum",
+      "confidence": 0.49824,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_37"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "ETYMOLOGY_DETECTION"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "crepido",
+      "confidence": 0.49199999999999994,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_16"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "lychnon",
+      "confidence": 0.48127999999999993,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_5"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "herculem",
+      "confidence": 0.48127999999999993,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_5"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "ETYMOLOGY_DETECTION"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "hesperon",
+      "confidence": 0.48127999999999993,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_6"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "genetai",
+      "confidence": 0.48127999999999993,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_6"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "ETYMOLOGY_DETECTION"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "gustat",
+      "confidence": 0.48127999999999993,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_6"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "ETYMOLOGY_DETECTION"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "omphalon",
+      "confidence": 0.48127999999999993,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_7"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "PHONOTACTIC_ANOMALY"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "subulo",
+      "confidence": 0.44325000000000003,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_7"
+      ],
+      "methods": [
+        "LOANWORD_ANALYSIS",
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [
+        "Known loan: subulo"
+      ],
+      "meaning": "flute player"
+    },
+    {
+      "word": "ludio",
+      "confidence": 0.38037499999999996,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_7"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "moribus",
+      "confidence": 0.36772499999999997,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:livy_31",
+        "latin_library:livy_40"
+      ],
+      "methods": [
+        "LEMNIAN_PARALLEL",
+        "FOREIGN_WORD_NER",
+        "ETYMOLOGY_DETECTION"
+      ],
+      "cross_linguistic_support": [
+        "Lemnian: morail"
+      ],
+      "meaning": ""
+    },
+    {
+      "word": "legerim",
+      "confidence": 0.36124999999999996,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:censorinus"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "oblatio",
+      "confidence": 0.35749999999999993,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_6"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN",
+        "ETYMOLOGY_DETECTION"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "vulgo",
+      "confidence": 0.35749999999999993,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:isidore_12",
+        "latin_library:isidore_19"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN",
+        "ETYMOLOGY_DETECTION"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "nequiquam",
+      "confidence": 0.33825,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_5"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "quid",
+      "confidence": 0.33825,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_5"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "habuerat",
+      "confidence": 0.33825,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_27"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "analogiae",
+      "confidence": 0.3152,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:varro_ll_9"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "iunio",
+      "confidence": 0.31325,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_26"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "quibus",
+      "confidence": 0.31325,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_27"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "legionibus",
+      "confidence": 0.31325,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_30"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "legatum",
+      "confidence": 0.31325,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:livy_38"
+      ],
+      "methods": [
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "ideo",
+      "confidence": 0.312,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:isidore_8"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "EXPLICIT_PATTERN"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "quam",
+      "confidence": 0.3114,
+      "sources_count": 1,
+      "sources": [
+        "latin_library:suetonius_grammaticis"
+      ],
+      "methods": [
+        "FOREIGN_WORD_NER",
+        "ETYMOLOGY_DETECTION"
+      ],
+      "cross_linguistic_support": [],
+      "meaning": ""
+    },
+    {
+      "word": "mortuum",
+      "confidence": 0.30174999999999996,
+      "sources_count": 2,
+      "sources": [
+        "latin_library:solinus_mommsen2",
+        "latin_library:solinus_2a"
+      ],
+      "methods": [
+        "LEMNIAN_PARALLEL",
+        "FOREIGN_WORD_NER"
+      ],
+      "cross_linguistic_support": [
+        "Lemnian: morail"
+      ],
+      "meaning": ""
+    }
+  ]
+}
