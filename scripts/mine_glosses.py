@@ -10,6 +10,9 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 
 from etruscan_miner.config import DB_PATH, TARGET_WORKS
+from etruscan_miner.corpus.github_corpus import GitHubCorpusReader
+from etruscan_miner.corpus.greek_texts import GreekCorpusClient, GREEK_WORKS
+from etruscan_miner.corpus.latin_library import LatinLibraryClient, LATIN_LIBRARY_URLS
 from etruscan_miner.corpus.perseus import PerseusClient, TextPassage
 from etruscan_miner.corpus.text_cache import WorkCache
 from etruscan_miner.db.models import Author, Candidate, Passage, Work
@@ -159,6 +162,270 @@ def mine_from_cache(
     return mine_work(work_key, repo, extractor, passages, min_confidence)
 
 
+def mine_github_corpus(
+    repo: Repository,
+    extractor: GlossExtractor,
+    min_confidence: float = 0.0,
+) -> tuple[int, int]:
+    """Mine the GitHub CLTK Latin Library corpus.
+
+    Args:
+        repo: Database repository
+        extractor: Gloss extractor
+        min_confidence: Minimum pattern confidence
+
+    Returns:
+        Tuple of (passages_scanned, candidates_found)
+    """
+    reader = GitHubCorpusReader()
+    total_files = reader.count_files()
+
+    if total_files == 0:
+        print("No GitHub corpus files found. Run download_all_texts.py --github first.")
+        return 0, 0
+
+    print(f"\nMining GitHub corpus ({total_files} files)...")
+
+    total_scanned = 0
+    total_found = 0
+
+    for i, github_text in enumerate(reader.iter_texts()):
+        # Create or get author
+        author = Author(
+            name=github_text.author,
+            description=f"Author from GitHub corpus",
+        )
+        author_id = repo.insert_author(author)
+
+        # Create or get work
+        work = Work(
+            author_id=author_id,
+            title=github_text.title,
+            urn=f"github:{github_text.filename}",
+            priority="LOW",  # Lower priority than explicit sources
+        )
+        work_id = repo.insert_work(work)
+
+        # Extract glosses
+        result = extractor.extract(github_text.text)
+
+        if result.found_glosses:
+            # Store passage
+            db_passage = Passage(
+                work_id=work_id,
+                reference=f"{github_text.author}/{github_text.filename}",
+                text_latin=github_text.text[:10000],  # Truncate for DB
+                text_normalized=github_text.text[:10000].lower(),
+                source_url=str(github_text.file_path),
+            )
+            passage_id = repo.insert_passage(db_passage)
+
+            # Store each candidate
+            for match in result.get_high_confidence_matches(min_confidence):
+                candidate = Candidate(
+                    passage_id=passage_id,
+                    mining_run_id=None,
+                    etruscan_word=match.etruscan_word,
+                    etruscan_normalized=match.etruscan_word.lower(),
+                    meaning_proposed=match.meaning_hint,
+                    context_before=match.context_before,
+                    context_after=match.context_after,
+                    full_match=match.full_match,
+                    pattern_confidence=match.confidence,
+                    status="pending",
+                )
+                repo.insert_candidate(candidate)
+                total_found += 1
+
+        total_scanned += 1
+
+        if (i + 1) % 200 == 0:
+            print(f"  Scanned {i + 1}/{total_files} files, found {total_found} candidates")
+
+    print(f"\nGitHub corpus: Scanned {total_scanned} files, found {total_found} candidates")
+    return total_scanned, total_found
+
+
+def mine_latin_library(
+    repo: Repository,
+    extractor: GlossExtractor,
+    min_confidence: float = 0.0,
+) -> tuple[int, int]:
+    """Mine the Latin Library cached texts.
+
+    Args:
+        repo: Database repository
+        extractor: Gloss extractor
+        min_confidence: Minimum pattern confidence
+
+    Returns:
+        Tuple of (passages_scanned, candidates_found)
+    """
+    client = LatinLibraryClient()
+    total_scanned = 0
+    total_found = 0
+
+    cached_files = list(client.cache_dir.glob("*.html"))
+    print(f"\nMining Latin Library ({len(cached_files)} cached files)...")
+
+    for i, cache_file in enumerate(cached_files):
+        text_id = cache_file.stem
+        text = client.get_text(text_id)
+
+        if not text or not text.text:
+            continue
+
+        # Create or get author
+        author = Author(
+            name=text.author,
+            description=f"Author from Latin Library",
+        )
+        author_id = repo.insert_author(author)
+
+        # Create or get work
+        work = Work(
+            author_id=author_id,
+            title=text.title,
+            urn=f"latinlibrary:{text_id}",
+            priority="HIGH",  # High priority
+        )
+        work_id = repo.insert_work(work)
+
+        # Extract glosses
+        result = extractor.extract(text.text)
+
+        if result.found_glosses:
+            # Store passage
+            db_passage = Passage(
+                work_id=work_id,
+                reference=f"{text.author}/{text.title}",
+                text_latin=text.text[:10000],
+                text_normalized=text.text[:10000].lower(),
+                source_url=text.source_url,
+            )
+            passage_id = repo.insert_passage(db_passage)
+
+            # Store each candidate
+            for match in result.get_high_confidence_matches(min_confidence):
+                candidate = Candidate(
+                    passage_id=passage_id,
+                    mining_run_id=None,
+                    etruscan_word=match.etruscan_word,
+                    etruscan_normalized=match.etruscan_word.lower(),
+                    meaning_proposed=match.meaning_hint,
+                    context_before=match.context_before,
+                    context_after=match.context_after,
+                    full_match=match.full_match,
+                    pattern_confidence=match.confidence,
+                    status="pending",
+                )
+                repo.insert_candidate(candidate)
+                total_found += 1
+
+        total_scanned += 1
+
+        if (i + 1) % 20 == 0:
+            print(f"  Scanned {i + 1}/{len(cached_files)} files, found {total_found} candidates")
+
+    print(f"\nLatin Library: Scanned {total_scanned} files, found {total_found} candidates")
+    return total_scanned, total_found
+
+
+def mine_greek_corpus(
+    repo: Repository,
+    extractor: GlossExtractor,
+    min_confidence: float = 0.0,
+    work_key: str = None,
+) -> tuple[int, int]:
+    """Mine Greek texts from Perseus for Etruscan glosses.
+
+    Args:
+        repo: Database repository
+        extractor: Gloss extractor
+        min_confidence: Minimum pattern confidence
+        work_key: Specific Greek work to mine (or None for all)
+
+    Returns:
+        Tuple of (passages_scanned, candidates_found)
+    """
+    client = GreekCorpusClient()
+    total_scanned = 0
+    total_found = 0
+
+    works_to_mine = {work_key: GREEK_WORKS[work_key]} if work_key else GREEK_WORKS
+
+    for key, work_info in works_to_mine.items():
+        print(f"\nMining {work_info['title']} by {work_info['author']}...")
+
+        # Fetch passages (prioritize Etruscan-relevant books)
+        if key == "dionysius_ant_rom":
+            passages = client.fetch_dionysius_book5()
+        elif key == "strabo_geography":
+            passages = client.fetch_strabo_book5()
+        else:
+            passages = client.fetch_work(key, max_passages=200)
+
+        if not passages:
+            print(f"  No passages fetched for {work_info['title']}")
+            continue
+
+        # Create author and work in DB
+        author = Author(
+            name=work_info["author"],
+            description=f"Greek author, source for Etruscan references",
+        )
+        author_id = repo.insert_author(author)
+
+        work = Work(
+            author_id=author_id,
+            title=work_info["title"],
+            urn=work_info["urn"],
+            priority=work_info["priority"],
+        )
+        work_id = repo.insert_work(work)
+
+        work_found = 0
+        for passage in passages:
+            total_scanned += 1
+
+            # Extract using Greek patterns
+            result = extractor.extract(passage.text, language="greek")
+
+            if result.found_glosses:
+                # Store passage
+                db_passage = Passage(
+                    work_id=work_id,
+                    reference=passage.reference,
+                    text_latin=passage.text[:10000],  # Greek text stored in latin field
+                    text_normalized=passage.text[:10000].lower(),
+                    source_url=passage.source_url,
+                )
+                passage_id = repo.insert_passage(db_passage)
+
+                # Store candidates
+                for match in result.get_high_confidence_matches(min_confidence):
+                    candidate = Candidate(
+                        passage_id=passage_id,
+                        mining_run_id=None,
+                        etruscan_word=match.etruscan_word,
+                        etruscan_normalized=match.etruscan_word.lower(),
+                        meaning_proposed=match.meaning_hint,
+                        context_before=match.context_before,
+                        context_after=match.context_after,
+                        full_match=match.full_match,
+                        pattern_confidence=match.confidence,
+                        status="pending",
+                    )
+                    repo.insert_candidate(candidate)
+                    total_found += 1
+                    work_found += 1
+
+        print(f"  Found {work_found} candidates in {work_info['title']}")
+
+    print(f"\nGreek corpus: Scanned {total_scanned} passages, found {total_found} candidates")
+    return total_scanned, total_found
+
+
 def mine_text(
     text: str,
     extractor: GlossExtractor,
@@ -214,10 +481,20 @@ def main():
         help="Work to mine (from TARGET_WORKS)",
     )
     parser.add_argument(
+        "--corpus",
+        choices=["github", "latin_library", "greek", "all"],
+        help="Mine from a specific corpus source",
+    )
+    parser.add_argument(
+        "--greek-work",
+        choices=list(GREEK_WORKS.keys()),
+        help="Specific Greek work to mine (use with --corpus greek)",
+    )
+    parser.add_argument(
         "--all",
         "-a",
         action="store_true",
-        help="Mine all cached works",
+        help="Mine all cached works (legacy option)",
     )
     parser.add_argument(
         "--text",
@@ -264,7 +541,30 @@ def main():
             print(f"  {table}: {count}")
         return
 
-    if args.work:
+    if args.corpus:
+        total_scanned = 0
+        total_found = 0
+
+        if args.corpus in ["github", "all"]:
+            scanned, found = mine_github_corpus(repo, extractor, args.min_confidence)
+            total_scanned += scanned
+            total_found += found
+
+        if args.corpus in ["latin_library", "all"]:
+            scanned, found = mine_latin_library(repo, extractor, args.min_confidence)
+            total_scanned += scanned
+            total_found += found
+
+        if args.corpus in ["greek", "all"]:
+            scanned, found = mine_greek_corpus(
+                repo, extractor, args.min_confidence, args.greek_work
+            )
+            total_scanned += scanned
+            total_found += found
+
+        print(f"\nTotal: Scanned {total_scanned} files, found {total_found} candidates")
+
+    elif args.work:
         scanned, found = mine_from_cache(
             args.work, repo, cache, extractor, args.min_confidence
         )

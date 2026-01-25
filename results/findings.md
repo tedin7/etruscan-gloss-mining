@@ -12,16 +12,56 @@ glosses in ancient Latin and Greek texts.
 
 | Metric | Count |
 |--------|-------|
-| Verified Glosses (seed data) | 43 |
-| Known Vocabulary | 84 |
+| Verified Glosses (seed data) | 134 |
+| Known Vocabulary | 10157 |
 | Mining Patterns | 8 |
-| Total Candidates | 0 |
-| Accepted Candidates | 0 |
-| Under Review | 0 |
+| Total Candidates | 625 |
+| Accepted Candidates | 97 |
+| Under Review | 37 |
 
 ---
 
 ## New Discoveries
+
+### High-Confidence Candidates
+
+| Word | Confidence | Context |
+|------|------------|---------|
+| **Subulo** | 0.90 | Callimachum in poematibus eius...: quocirca radices eius in Etr |
+| **deus** | 0.90 | ra notaret, futurumque ut inte...vocaretur. Tiberium igitur in  |
+| **Subulo** | 0.90 | Callimachum in poematibus eius...: quocirca radices eius in Etr |
+| **ister** | 0.85 | a voce motus erant. Accepta it...ludio vocabatur, nomen histrio |
+| **ludio** | 0.85 | e motus erant. Accepta itaque ...vocabatur, nomen histrionibus  |
+| **ita** | 0.75 | distant. Sunt enim in facie pr...capta exuritur, eiusque cinere |
+| **ita** | 0.75 | um nutrit, sicque iterum de ci...in excelsis nemoribus texit ni |
+| **Lentis** | 0.75 | yptia. [4] Faba fresa dicta eo...humida et lenta est, vel quod  |
+| **Lanterna** | 0.75 | quod lambentis motum ostendere...lucem interius habeat clausam. |
+| **se** | 0.75 | inorum prodente civitatem fact...fidemque quam implorassent ab  |
+| **anno** | 0.75 | adversus Umbros missa a flumin...adversus indutias paratum bell |
+| **est** | 0.75 | i. Exceptis enim Latinis hanc ...per C cuncta veteres scripseru |
+| **ita** | 0.75 | ricus conposuit. [8] A frequen...ea idem elegantissime [et freq |
+| **ita** | 0.75 | distant. Sunt enim in facie pr...capta exuritur, eiusque cinere |
+| **ita** | 0.75 | um nutrit, sicque iterum de ci...in excelsis nemoribus texit ni |
+| **Lentis** | 0.75 | yptia. [4] Faba fresa dicta eo...humida et lenta est, vel quod  |
+| **Lanterna** | 0.75 | quod lambentis motum ostendere...lucem interius habeat clausam. |
+| **anno** | 0.75 | aduersus Vmbros missa a flumin...aduersus indutias paratum bell |
+| **se** | 0.75 | inorum prodente ciuitatem fact...fidemque quam implorassent ab  |
+| **eius** | 0.70 | am marinas propter astabat pla..., non Latio quaerundae. Versib |
+
+### Candidates Under Review
+
+The following candidates require expert review:
+
+- **autem**: `autem vocatur quod`
+- **Spes**: `Spes vocata quod`
+- **Iscurra**: `Iscurra vocatur quia`
+- **Sicarius**: `Sicarius vocatur quia`
+- **Hispaniae**: `Hispaniae dicta quod`
+- **Cella**: `Cella dicta quod`
+- **Arista**: `Arista appellata quod`
+- **Alnus**: `Alnus vocatur quod`
+- **Arca**: `Arca dicta quod`
+- **Clavis**: `Clavis dicta quod`
 
 ---
 

@@ -299,6 +299,151 @@ FESTUS_PATTERNS = [
     ),
 ]
 
+# Isidore patterns - for Etymologiae-style derivations
+ISIDORE_PATTERNS = [
+    LatinPattern(
+        name="isidore_derivatum",
+        regex=r"(\w+)\s+ab?\s+(\w+)\s+derivat[ua]m",
+        description="X ab Y derivatum - X derived from Y",
+        confidence=0.70,
+    ),
+    LatinPattern(
+        name="isidore_oriunda",
+        regex=r"(\w+)\s+ex\s+(\w+)\s+oriund[ua]",
+        description="X ex Y oriunda - X originating from Y",
+        confidence=0.70,
+    ),
+    LatinPattern(
+        name="isidore_dictum_quod",
+        regex=r"(\w+)\s+dict[ua]m?\s+(?:est\s+)?quod",
+        description="X dictum quod - X is called because",
+        confidence=0.70,
+    ),
+    LatinPattern(
+        name="isidore_vocatur",
+        regex=r"(\w+)\s+(?:inde\s+)?vocat(?:ur|a)\s+(?:quod|quia)",
+        description="X vocatur quod - X is called because",
+        confidence=0.75,
+    ),
+    LatinPattern(
+        name="isidore_appellatur",
+        regex=r"(\w+)\s+appella(?:tur|ta)\s+(?:quod|quia|ab?)",
+        description="X appellatur quod/ab - X is called because/from",
+        confidence=0.70,
+    ),
+]
+
+# Comparative patterns - bilingual glosses
+COMPARATIVE_PATTERNS = [
+    LatinPattern(
+        name="etrusca_latina",
+        regex=r"(\w+)\s+[Ee]trusc[ae],?\s+(\w+)\s+[Ll]atin[ae]",
+        description="X Etrusce, Y Latine - X in Etruscan, Y in Latin",
+        confidence=0.90,
+        meaning_group=2,
+    ),
+    LatinPattern(
+        name="dicunt_etrusci_nos",
+        regex=r"(\w+)\s+dicunt\s+[Ee]trusci,?\s+(\w+)\s+(?:dicimus\s+)?nos",
+        description="X dicunt Etrusci, Y nos - Etruscans say X, we say Y",
+        confidence=0.85,
+        meaning_group=2,
+    ),
+    LatinPattern(
+        name="quod_latine_etrusce",
+        regex=r"quod\s+[Ll]atine\s+(\w+),?\s+[Ee]trusce\s+(\w+)",
+        description="quod Latine X, Etrusce Y - what in Latin is X, in Etruscan Y",
+        confidence=0.90,
+        word_group=2,
+        meaning_group=1,
+    ),
+    LatinPattern(
+        name="etrusce_latine",
+        regex=r"[Ee]trusce\s+(\w+),?\s+[Ll]atine\s+(\w+)",
+        description="Etrusce X, Latine Y - in Etruscan X, in Latin Y",
+        confidence=0.90,
+        meaning_group=2,
+    ),
+]
+
+# Negative patterns - scholarly skepticism
+NEGATIVE_PATTERNS = [
+    LatinPattern(
+        name="non_etrusca_sed",
+        regex=r"(\w+)\s+non\s+[Ee]trusc[ae]\s+sed\s+[Ll]atin[ae]",
+        description="X non Etrusca sed Latina - X not Etruscan but Latin",
+        confidence=0.75,
+    ),
+    LatinPattern(
+        name="quidam_putant_etrusca",
+        regex=r"quidam\s+(?:putant|existimant)\s+(\w+)\s+[Ee]trusc[ae]",
+        description="quidam putant X Etrusca - some think X is Etruscan",
+        confidence=0.70,
+    ),
+    LatinPattern(
+        name="falso_etrusca",
+        regex=r"falso\s+(?:putant|dicunt)\s+(\w+)\s+[Ee]trusc[ae]",
+        description="falso putant X Etrusca - they wrongly think X is Etruscan",
+        confidence=0.65,
+    ),
+]
+
+# Inscriptional patterns - epigraphic references
+INSCRIPTIONAL_PATTERNS = [
+    LatinPattern(
+        name="in_etruscis_litteris",
+        regex=r"in\s+[Ee]truscis\s+litteris\s+(\w+)",
+        description="in Etruscis litteris X - in Etruscan letters/inscriptions X",
+        confidence=0.85,
+    ),
+    LatinPattern(
+        name="etrusco_charactere",
+        regex=r"[Ee]trusco\s+character[ei]\s+(\w+)",
+        description="Etrusco charactere X - in Etruscan script X",
+        confidence=0.85,
+    ),
+    LatinPattern(
+        name="litteris_tuscis",
+        regex=r"litteris\s+[Tt]uscis\s+(\w+)",
+        description="litteris Tuscis X - in Tuscan letters X",
+        confidence=0.85,
+    ),
+]
+
+# Authority patterns - citations of ancient scholars
+AUTHORITY_PATTERNS = [
+    LatinPattern(
+        name="secundum_varronem",
+        regex=r"secundum\s+[Vv]arronem\s+(\w+)\s+[Ee]trusc",
+        description="secundum Varronem X Etrusc- - according to Varro, X is Etruscan",
+        confidence=0.90,
+    ),
+    LatinPattern(
+        name="ut_ait_festus",
+        regex=r"ut\s+ait\s+[Ff]estus,?\s+(\w+)",
+        description="ut ait Festus X - as Festus says, X",
+        confidence=0.85,
+    ),
+    LatinPattern(
+        name="teste_varrone",
+        regex=r"teste\s+[Vv]arrone\s+(\w+)",
+        description="teste Varrone X - with Varro as witness, X",
+        confidence=0.90,
+    ),
+    LatinPattern(
+        name="varro_dicit",
+        regex=r"[Vv]arro\s+(?:ait|dicit|scribit)\s+(\w+)\s+[Ee]trusc",
+        description="Varro dicit X Etrusc- - Varro says X is Etruscan",
+        confidence=0.90,
+    ),
+    LatinPattern(
+        name="apud_varronem",
+        regex=r"apud\s+[Vv]arronem\s+(\w+)",
+        description="apud Varronem X - in Varro, X",
+        confidence=0.85,
+    ),
+]
+
 # Collect all patterns
 ALL_PATTERNS: list[LatinPattern] = (
     CORE_PATTERNS
@@ -308,6 +453,11 @@ ALL_PATTERNS: list[LatinPattern] = (
     + MEANING_PATTERNS
     + VARRO_PATTERNS
     + FESTUS_PATTERNS
+    + ISIDORE_PATTERNS
+    + COMPARATIVE_PATTERNS
+    + NEGATIVE_PATTERNS
+    + INSCRIPTIONAL_PATTERNS
+    + AUTHORITY_PATTERNS
 )
 
 
