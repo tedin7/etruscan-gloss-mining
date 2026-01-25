@@ -1,0 +1,593 @@
+{
+  "method": "systematic_multi_method_verification",
+  "total_analyzed": 284,
+  "multi_method_confirmed": 24,
+  "candidates": [
+    {
+      "word": "atrium",
+      "methods": [
+        "PROTO",
+        "PROTO",
+        "PROTO",
+        "PROTO",
+        "PROTO"
+      ],
+      "total_methods": 5,
+      "confidence": 1.0,
+      "known_loan": true,
+      "semi_known": false,
+      "potentially_new": false,
+      "phonotactic_score": 0.7200000000000001,
+      "phonotactic_features": [
+        "No voiced stops (b/d/g)",
+        "No 'o' vowel"
+      ],
+      "inscription_match": "",
+      "inscription_meaning": "",
+      "semantic_domain": "ARCHITECTURE",
+      "proto_form": "*tinia",
+      "lemnian_parallel": "",
+      "raetic_parallel": ""
+    },
+    {
+      "word": "haruspex",
+      "methods": [
+        "PHONOTACTIC",
+        "SEMANTIC",
+        "PROTO",
+        "PROTO"
+      ],
+      "total_methods": 4,
+      "confidence": 0.95,
+      "known_loan": true,
+      "semi_known": false,
+      "potentially_new": false,
+      "phonotactic_score": 0.93,
+      "phonotactic_features": [
+        "No voiced stops (b/d/g)",
+        "No 'o' vowel",
+        "Cluster sp-",
+        "Initial h-"
+      ],
+      "inscription_match": "",
+      "inscription_meaning": "",
+      "semantic_domain": "DIVINATION",
+      "proto_form": "*p\u02b0ersu",
+      "lemnian_parallel": "",
+      "raetic_parallel": ""
+    },
+    {
+      "word": "harena",
+      "methods": [
+        "PHONOTACTIC",
+        "SEMANTIC",
+        "PROTO"
+      ],
+      "total_methods": 3,
+      "confidence": 0.75,
+      "known_loan": false,
+      "semi_known": true,
+      "potentially_new": true,
+      "phonotactic_score": 1.0,
+      "phonotactic_features": [
+        "No voiced stops (b/d/g)",
+        "No 'o' vowel",
+        "Ending -na",
+        "Initial h-"
+      ],
+      "inscription_match": "",
+      "inscription_meaning": "",
+      "semantic_domain": "MILITARY",
+      "proto_form": "*hera",
+      "lemnian_parallel": "",
+      "raetic_parallel": ""
+    },
+    {
+      "word": "lanista",
+      "methods": [
+        "PHONOTACTIC",
+        "SEMANTIC",
+        "PROTO"
+      ],
+      "total_methods": 3,
+      "confidence": 0.75,
+      "known_loan": true,
+      "semi_known": false,
+      "potentially_new": false,
+      "phonotactic_score": 0.8500000000000001,
+      "phonotactic_features": [
+        "No voiced stops (b/d/g)",
+        "No 'o' vowel",
+        "Cluster st-"
+      ],
+      "inscription_match": "",
+      "inscription_meaning": "",
+      "semantic_domain": "MILITARY",
+      "proto_form": "*tinia",
+      "lemnian_parallel": "",
+      "raetic_parallel": ""
+    },
+    {
+      "word": "capra",
+      "methods": [
+        "PHONOTACTIC",
+        "INSCRIPTION"
+      ],
+      "total_methods": 2,
+      "confidence": 0.7,
+      "known_loan": false,
+      "semi_known": false,
+      "potentially_new": true,
+      "phonotactic_score": 0.92,
+      "phonotactic_features": [
+        "No voiced stops (b/d/g)",
+        "No 'o' vowel",
+        "Ending -ra"
+      ],
+      "inscription_match": "capra",
+      "inscription_meaning": "container",
+      "semantic_domain": "GENERAL",
+      "proto_form": "",
+      "lemnian_parallel": "",
+      "raetic_parallel": ""
+    },
+    {
+      "word": "machina",
+      "methods": [
+        "PHONOTACTIC",
+        "INSCRIPTION"
+      ],
+      "total_methods": 2,
+      "confidence": 0.7,
+      "known_loan": false,
+      "semi_known": false,
+      "potentially_new": true,
+      "phonotactic_score": 1.0,
+      "phonotactic_features": [
+        "No voiced stops (b/d/g)",
+        "No 'o' vowel",
+        "Aspirated stops (ph/th/ch)",
+        "Ending -na"
+      ],
+      "inscription_match": "mach",
+      "inscription_meaning": "five",
+      "semantic_domain": "GENERAL",
+      "proto_form": "",
+      "lemnian_parallel": "",
+      "raetic_parallel": ""
+    },
+    {
+      "word": "fanum",
+      "methods": [
+        "INSCRIPTION",
+        "SEMANTIC"
+      ],
+      "total_methods": 2,
+      "confidence": 0.65,
+      "known_loan": false,
+      "semi_known": false,
+      "potentially_new": true,
+      "phonotactic_score": 0.7200000000000001,
+      "phonotactic_features": [
+        "No voiced stops (b/d/g)",
+        "No 'o' vowel"
+      ],
+      "inscription_match": "fanu",
+      "inscription_meaning": "sanctuary",
+      "semantic_domain": "RELIGION",
+      "proto_form": "",
+      "lemnian_parallel": "",
+      "raetic_parallel": ""
+    },
+    {
+      "word": "spurius",
+      "methods": [
+        "PHONOTACTIC",
+        "PROTO"
+      ],
+      "total_methods": 2,
+      "confidence": 0.6499999999999999,
+      "known_loan": true,
+      "semi_known": false,
+      "potentially_new": false,
+      "phonotactic_score": 0.8200000000000002,
+      "phonotactic_features": [
+        "No voiced stops (b/d/g)",
+        "No 'o' vowel",
+        "Cluster sp-",
+        "Initial consonant cluster"
+      ],
+      "inscription_match": "",
+      "inscription_meaning": "",
+      "semantic_domain": "GENERAL",
+      "proto_form": "*p\u02b0ersu",
+      "lemnian_parallel": "",
+      "raetic_parallel": ""
+    },
+    {
+      "word": "histrio",
+      "methods": [
+        "SEMANTIC",
+        "PROTO"
+      ],
+      "total_methods": 2,
+      "confidence": 0.6000000000000001,
+      "known_loan": true,
+      "semi_known": false,
+      "potentially_new": false,
+      "phonotactic_score": 0.68,
+      "phonotactic_features": [
+        "No voiced stops (b/d/g)",
+        "Cluster st-",
+        "Initial h-"
+      ],
+      "inscription_match": "",
+      "inscription_meaning": "",
+      "semantic_domain": "THEATRE",
+      "proto_form": "*tur",
+      "lemnian_parallel": "",
+      "raetic_parallel": ""
+    },
+    {
+      "word": "mimus",
+      "methods": [
+        "SEMANTIC",
+        "PROTO"
+      ],
+      "total_methods": 2,
+      "confidence": 0.6000000000000001,
+      "known_loan": false,
+      "semi_known": false,
+      "potentially_new": true,
+      "phonotactic_score": 0.7200000000000001,
+      "phonotactic_features": [
+        "No voiced stops (b/d/g)",
+        "No 'o' vowel"
+      ],
+      "inscription_match": "",
+      "inscription_meaning": "",
+      "semantic_domain": "THEATRE",
+      "proto_form": "*ais",
+      "lemnian_parallel": "",
+      "raetic_parallel": ""
+    },
+    {
+      "word": "persona",
+      "methods": [
+        "SEMANTIC",
+        "PROTO"
+      ],
+      "total_methods": 2,
+      "confidence": 0.6000000000000001,
+      "known_loan": true,
+      "semi_known": false,
+      "potentially_new": false,
+      "phonotactic_score": 0.7000000000000001,
+      "phonotactic_features": [
+        "No voiced stops (b/d/g)",
+        "Ending -na"
+      ],
+      "inscription_match": "",
+      "inscription_meaning": "",
+      "semantic_domain": "THEATRE",
+      "proto_form": "*p\u02b0ersu",
+      "lemnian_parallel": "",
+      "raetic_parallel": ""
+    },
+    {
+      "word": "amphora",
+      "methods": [
+        "PHONOTACTIC",
+        "SEMANTIC"
+      ],
+      "total_methods": 2,
+      "confidence": 0.5499999999999999,
+      "known_loan": false,
+      "semi_known": false,
+      "potentially_new": true,
+      "phonotactic_score": 0.79,
+      "phonotactic_features": [
+        "No voiced stops (b/d/g)",
+        "Aspirated stops (ph/th/ch)",
+        "Ending -ra"
+      ],
+      "inscription_match": "",
+      "inscription_meaning": "",
+      "semantic_domain": "WINE",
+      "proto_form": "",
+      "lemnian_parallel": "",
+      "raetic_parallel": ""
+    },
+    {
+      "word": "arena",
+      "methods": [
+        "PHONOTACTIC",
+        "SEMANTIC"
+      ],
+      "total_methods": 2,
+      "confidence": 0.5499999999999999,
+      "known_loan": false,
+      "semi_known": true,
+      "potentially_new": true,
+      "phonotactic_score": 0.9500000000000001,
+      "phonotactic_features": [
+        "No voiced stops (b/d/g)",
+        "No 'o' vowel",
+        "Ending -na"
+      ],
+      "inscription_match": "",
+      "inscription_meaning": "",
+      "semantic_domain": "MILITARY",
+      "proto_form": "",
+      "lemnian_parallel": "",
+      "raetic_parallel": ""
+    },
+    {
+      "word": "certamina",
+      "methods": [
+        "PHONOTACTIC",
+        "SEMANTIC"
+      ],
+      "total_methods": 2,
+      "confidence": 0.5499999999999999,
+      "known_loan": false,
+      "semi_known": false,
+      "potentially_new": true,
+      "phonotactic_score": 0.9500000000000001,
+      "phonotactic_features": [
+        "No voiced stops (b/d/g)",
+        "No 'o' vowel",
+        "Ending -na"
+      ],
+      "inscription_match": "",
+      "inscription_meaning": "",
+      "semantic_domain": "MILITARY",
+      "proto_form": "",
+      "lemnian_parallel": "",
+      "raetic_parallel": ""
+    },
+    {
+      "word": "cisterna",
+      "methods": [
+        "PHONOTACTIC",
+        "SEMANTIC"
+      ],
+      "total_methods": 2,
+      "confidence": 0.5499999999999999,
+      "known_loan": false,
+      "semi_known": true,
+      "potentially_new": true,
+      "phonotactic_score": 1.0,
+      "phonotactic_features": [
+        "No voiced stops (b/d/g)",
+        "No 'o' vowel",
+        "Ending -na",
+        "Cluster st-"
+      ],
+      "inscription_match": "",
+      "inscription_meaning": "",
+      "semantic_domain": "THEATRE",
+      "proto_form": "",
+      "lemnian_parallel": "",
+      "raetic_parallel": ""
+    },
+    {
+      "word": "harenas",
+      "methods": [
+        "PHONOTACTIC",
+        "SEMANTIC"
+      ],
+      "total_methods": 2,
+      "confidence": 0.5499999999999999,
+      "known_loan": false,
+      "semi_known": false,
+      "potentially_new": true,
+      "phonotactic_score": 0.88,
+      "phonotactic_features": [
+        "No voiced stops (b/d/g)",
+        "No 'o' vowel",
+        "Initial h-"
+      ],
+      "inscription_match": "",
+      "inscription_meaning": "",
+      "semantic_domain": "MILITARY",
+      "proto_form": "",
+      "lemnian_parallel": "",
+      "raetic_parallel": ""
+    },
+    {
+      "word": "intestina",
+      "methods": [
+        "PHONOTACTIC",
+        "SEMANTIC"
+      ],
+      "total_methods": 2,
+      "confidence": 0.5499999999999999,
+      "known_loan": false,
+      "semi_known": false,
+      "potentially_new": true,
+      "phonotactic_score": 1.0,
+      "phonotactic_features": [
+        "No voiced stops (b/d/g)",
+        "No 'o' vowel",
+        "Ending -na",
+        "Cluster st-"
+      ],
+      "inscription_match": "",
+      "inscription_meaning": "",
+      "semantic_domain": "DIVINATION",
+      "proto_form": "",
+      "lemnian_parallel": "",
+      "raetic_parallel": ""
+    },
+    {
+      "word": "ister",
+      "methods": [
+        "PHONOTACTIC",
+        "SEMANTIC"
+      ],
+      "total_methods": 2,
+      "confidence": 0.5499999999999999,
+      "known_loan": false,
+      "semi_known": false,
+      "potentially_new": true,
+      "phonotactic_score": 0.8500000000000001,
+      "phonotactic_features": [
+        "No voiced stops (b/d/g)",
+        "No 'o' vowel",
+        "Cluster st-"
+      ],
+      "inscription_match": "",
+      "inscription_meaning": "",
+      "semantic_domain": "THEATRE",
+      "proto_form": "",
+      "lemnian_parallel": "",
+      "raetic_parallel": ""
+    },
+    {
+      "word": "larva",
+      "methods": [
+        "PHONOTACTIC",
+        "SEMANTIC"
+      ],
+      "total_methods": 2,
+      "confidence": 0.5499999999999999,
+      "known_loan": false,
+      "semi_known": false,
+      "potentially_new": true,
+      "phonotactic_score": 0.8,
+      "phonotactic_features": [
+        "No voiced stops (b/d/g)",
+        "No 'o' vowel"
+      ],
+      "inscription_match": "",
+      "inscription_meaning": "",
+      "semantic_domain": "THEATRE",
+      "proto_form": "",
+      "lemnian_parallel": "",
+      "raetic_parallel": ""
+    },
+    {
+      "word": "mane",
+      "methods": [
+        "PHONOTACTIC",
+        "SEMANTIC"
+      ],
+      "total_methods": 2,
+      "confidence": 0.5499999999999999,
+      "known_loan": false,
+      "semi_known": false,
+      "potentially_new": true,
+      "phonotactic_score": 0.8,
+      "phonotactic_features": [
+        "No voiced stops (b/d/g)",
+        "No 'o' vowel"
+      ],
+      "inscription_match": "",
+      "inscription_meaning": "",
+      "semantic_domain": "RELIGION",
+      "proto_form": "",
+      "lemnian_parallel": "",
+      "raetic_parallel": ""
+    },
+    {
+      "word": "scaena",
+      "methods": [
+        "PHONOTACTIC",
+        "SEMANTIC"
+      ],
+      "total_methods": 2,
+      "confidence": 0.5499999999999999,
+      "known_loan": false,
+      "semi_known": true,
+      "potentially_new": true,
+      "phonotactic_score": 1.0,
+      "phonotactic_features": [
+        "No voiced stops (b/d/g)",
+        "No 'o' vowel",
+        "Ending -na",
+        "Cluster sc-",
+        "Initial consonant cluster"
+      ],
+      "inscription_match": "",
+      "inscription_meaning": "",
+      "semantic_domain": "THEATRE",
+      "proto_form": "",
+      "lemnian_parallel": "",
+      "raetic_parallel": ""
+    },
+    {
+      "word": "scena",
+      "methods": [
+        "PHONOTACTIC",
+        "SEMANTIC"
+      ],
+      "total_methods": 2,
+      "confidence": 0.5499999999999999,
+      "known_loan": false,
+      "semi_known": true,
+      "potentially_new": true,
+      "phonotactic_score": 1.0,
+      "phonotactic_features": [
+        "No voiced stops (b/d/g)",
+        "No 'o' vowel",
+        "Ending -na",
+        "Cluster sc-",
+        "Initial consonant cluster"
+      ],
+      "inscription_match": "",
+      "inscription_meaning": "",
+      "semantic_domain": "THEATRE",
+      "proto_form": "",
+      "lemnian_parallel": "",
+      "raetic_parallel": ""
+    },
+    {
+      "word": "se",
+      "methods": [
+        "PHONOTACTIC",
+        "SEMANTIC"
+      ],
+      "total_methods": 2,
+      "confidence": 0.5499999999999999,
+      "known_loan": false,
+      "semi_known": false,
+      "potentially_new": true,
+      "phonotactic_score": 0.8,
+      "phonotactic_features": [
+        "No voiced stops (b/d/g)",
+        "No 'o' vowel"
+      ],
+      "inscription_match": "",
+      "inscription_meaning": "",
+      "semantic_domain": "MILITARY",
+      "proto_form": "",
+      "lemnian_parallel": "",
+      "raetic_parallel": ""
+    },
+    {
+      "word": "tromentina",
+      "methods": [
+        "PHONOTACTIC",
+        "SEMANTIC"
+      ],
+      "total_methods": 2,
+      "confidence": 0.5499999999999999,
+      "known_loan": false,
+      "semi_known": false,
+      "potentially_new": true,
+      "phonotactic_score": 0.7500000000000001,
+      "phonotactic_features": [
+        "No voiced stops (b/d/g)",
+        "Ending -na",
+        "Initial consonant cluster"
+      ],
+      "inscription_match": "",
+      "inscription_meaning": "",
+      "semantic_domain": "DIVINATION",
+      "proto_form": "",
+      "lemnian_parallel": "",
+      "raetic_parallel": ""
+    }
+  ]
+}
