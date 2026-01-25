@@ -8,6 +8,57 @@ NLP pipeline for mining Etruscan glosses from ancient Latin and Greek texts. The
 
 ## Commands
 
+### Unified CLI (Recommended)
+
+```bash
+# Install the package
+pip install -e .
+
+# Main entry point
+etruscan --help
+
+# Database operations
+etruscan db setup                    # Create database
+etruscan db stats                    # Show statistics
+etruscan db import-seeds             # Import seed data
+etruscan db reset                    # Reset database
+
+# Corpus management
+etruscan corpus download --all       # Download from all sources
+etruscan corpus download --source latin_library
+etruscan corpus download --source perseus
+etruscan corpus download --source greek
+etruscan corpus stats                # Show corpus statistics
+etruscan corpus import-inscriptions  # Import inscription vocabulary
+
+# Find candidates (replaces mine + discover)
+etruscan find --text "Tusci vocant subulo quod nos tibicinem"
+etruscan find --corpus latin_library
+etruscan find --corpus all
+etruscan find --corpus greek --greek-work dionysius_ant_rom
+etruscan find --corpus all --advanced     # Enable advanced discovery methods
+etruscan find --show pending              # Show pending candidates
+
+# Analyze candidates (replaces validate + verify)
+etruscan analyze --word harena            # Analyze single word with all 9 methods
+etruscan analyze --status pending         # Analyze pending candidates
+etruscan analyze --use-ml                 # Enable ML-based classifiers
+etruscan analyze --methods-required 2     # Require 2+ methods to confirm
+etruscan analyze --report                 # Generate comprehensive report
+etruscan analyze --show-accepted          # Show accepted candidates
+
+# ML model training
+etruscan train word-classifier --test --importance
+etruscan train context-classifier --test
+
+# Export
+etruscan export --format markdown -o findings.md
+etruscan export --format json --type candidates
+etruscan export --format csv --type all
+```
+
+### Legacy Scripts (for backwards compatibility)
+
 ```bash
 # Setup database (creates SQLite at data/etruscan_glosses.db)
 python scripts/setup_database.py
@@ -95,6 +146,19 @@ python -c "from etruscan_miner.linguistics import LemnianAnalyzer; la = LemnianA
 
 ### Data Flow
 ```
+                         etruscan CLI
+                              ↓
+Markdown seed files → etruscan db import-seeds → SQLite DB
+                                                       ↓
+Perseus API → etruscan corpus download → text_cache → etruscan find → candidates table
+                                                                            ↓
+                                        etruscan analyze (9 methods) → scored/accepted
+                                                                            ↓
+                                                      etruscan export → MD/CSV/JSON
+```
+
+Alternative (legacy scripts):
+```
 Markdown seed files → import_seeds.py → SQLite DB
                                             ↓
 Perseus API → text_cache.py → mine_glosses.py → candidates table
@@ -106,17 +170,28 @@ Perseus API → text_cache.py → mine_glosses.py → candidates table
 
 ### Core Modules (src/etruscan_miner/)
 
+- **cli/**: Unified command-line interface
+  - `__init__.py`: Main CLI router with Click groups
+  - `commands/db.py`: Database operations (setup, stats, reset, import-seeds)
+  - `commands/corpus.py`: Corpus download and management
+  - `commands/find.py`: Find candidates with pattern matching + advanced discovery
+  - `commands/analyze.py`: Analyze candidates with unified 9-method scoring
+  - `commands/train.py`: ML model training
+  - `commands/export.py`: Results export
+  - `utils.py`: Shared CLI utilities
+
 - **patterns/**: Regex patterns for gloss detection
   - `latin_patterns.py`: 30+ patterns like `tusci_vocant`, `etrusca_lingua`
   - `extractor.py`: `GlossExtractor` class applies patterns, extracts context
 
-- **validation/**: Multi-factor scoring pipeline (3-layer ML filter)
+- **validation/**: Multi-factor scoring pipeline (9 methods)
+  - `unified.py`: Unified 9-method validator (pattern, cross-ref, linguistic, phonotactic, context, inscription, semantic, lemnian, raetic)
   - `cross_reference.py`: Matches against known vocabulary (exact/root/similar)
   - `linguistic.py`: Etruscan phonotactic rules (no voiced stops b/d/g, typical endings)
   - `dependency_filter.py`: Layer 1 - spaCy dependency parsing for Etruscan attribution
   - `word_classifier.py`: Layer 2 - Character n-gram ML classifier for Etruscan-like words
   - `context_classifier.py`: Layer 3 - Context classifier (TF-IDF/embeddings/DistilBERT)
-  - `scorer.py`: Combines pattern confidence (30%), cross-ref (30%), linguistic (20%), context (20%)
+  - `scorer.py`: Legacy 4-factor scorer (pattern, cross-ref, linguistic, context)
 
 - **db/**: SQLite persistence
   - `schema.sql`: 10 tables (authors, works, passages, candidates, verified_glosses, etc.)
