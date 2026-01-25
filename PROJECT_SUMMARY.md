@@ -126,32 +126,28 @@
 4. ✅ Ottenere paper completo su 43+20+24 glosse consensus - DOCUMENTATO
 5. 🔴 Esplorare ETP per export dati
 
-### Fase 2: Estrazione Glosse da Fonti Primarie
-1. 🔴 Cercare testo completo Festo (*De verborum significatione*)
-2. 🔴 Cercare sezioni rilevanti Varrone (*De Lingua Latina*)
-3. 🔴 Compilare lista completa citazioni Svetonio
-4. 🔴 Verificare Isidoro *Etymologiae* per sezioni etrusche
+### Fase 2: Estrazione Glosse da Fonti Primarie ✅
+1. ✅ Latin Library: Varro, Festus Breviarium, Isidore (20 libri)
+2. ✅ Perseus CTS API: Pliny, Livy, Virgil
+3. ✅ Greek texts: Dionysius, Strabo, Herodotus, Plutarch
+4. ✅ Hesychius lexicon: glosse con tag Tyrrhenian
 
-### Fase 3: Analisi Automatizzata Perseus
-1. 🔴 Verificare API Perseus Digital Library disponibile
-2. 🔴 Creare script ricerca pattern:
-   - "etrusco/a"
-   - "Tusci/Tuscorum"
-   - "lingua etrusca"
-   - "apud Etruscos"
-   - "vocant" + contesto etrusco
-3. 🔴 Scansionare corpus latino completo pre-200 d.C.
+### Fase 3: Analisi Automatizzata Perseus ✅
+1. ✅ API Perseus funzionante (GetPassage, non GetValidReff)
+2. ✅ 45+ pattern regex per ricerca:
+   - "Tusci vocant", "lingua Etrusca", "apud Etruscos"
+   - Pattern greci: "Τυρρηνοί καλοῦσι"
+3. ✅ Mining automatizzato con `scripts/mine_glosses.py`
+4. ✅ Validazione ML a 3 livelli (dependency + word + context)
 
-### Fase 4: Consolidamento Finale
-1. 🔴 Unificare tutte le glosse raccolte
-2. 🔴 Verificare duplicati e varianti
-3. 🔴 Creare database strutturato:
-   - Parola etrusca
-   - Significato
-   - Fonte antica (autore + opera + citazione)
-   - Citazione contestuale
-   - Affidabilità
-4. 🔴 Comparare con iscrizioni per verifica
+### Fase 4: Consolidamento Finale ✅
+1. ✅ Database SQLite strutturato (`data/etruscan_glosses.db`)
+2. ✅ 877+ candidati estratti
+3. ✅ Schema 10 tabelle:
+   - authors, works, passages, candidates
+   - verified_glosses, validations, mining_runs
+4. ✅ Cross-reference con CIEW inscriptions (10,000+ parole)
+5. ✅ Export in Markdown/CSV/JSON
 
 ---
 
@@ -179,11 +175,32 @@ Una glossa etrusca è una parola etrusca il cui significato è esplicitamente sp
 
 ## STATISTICHE ATTUALI
 
-- **Parole etrusche catalogate:** ~1,500 (Tripod)
-- **Glosse con fonte antica verificata:** ~10
-- **Database da integrare:** 2 (Copeland, Forni)
-- **Autori antichi identificati:** 12+
-- **Loanwords latino-etruschi:** ~15+
+- **Parole etrusche catalogate:** ~11,500 (Tripod + CIEW inscriptions)
+- **Glosse con fonte antica verificata:** 47+ (in ANCIENT_GLOSSES_VERIFIED.md)
+- **Candidati estratti dal mining:** 877+
+- **Pattern regex implementati:** 45+ Latin + Greek
+- **Autori antichi minati:** Varro, Festus, Isidore, Suetonius, Dionysius, Strabo, Herodotus
+- **Test automatizzati:** 107 (pytest)
+- **Dimensione corpus scaricato:** ~140 MB
+
+### Comandi Principali
+```bash
+# Setup
+python scripts/setup_database.py && python scripts/import_seeds.py
+
+# Download texts
+python scripts/download_all_texts.py --all
+
+# Mining
+python scripts/mine_glosses.py --corpus latin_library
+python scripts/mine_glosses.py --corpus greek
+
+# Validation
+python scripts/validate_candidates.py --use-ml
+
+# Export
+python scripts/export_results.py --format markdown -o results/findings.md
+```
 
 ---
 
@@ -206,4 +223,4 @@ Una glossa etrusca è una parola etrusca il cui significato è esplicitamente sp
 
 ---
 
-**Ultimo aggiornamento:** 2026-01-24 03:00 CET
+**Ultimo aggiornamento:** 2026-01-25

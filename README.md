@@ -26,11 +26,24 @@ Ancient Roman authors occasionally explained Etruscan words in their texts. Thes
 ```
 etruscan-gloss-mining/
 ├── README.md                           # This file
+├── CLAUDE.md                           # Development guide for Claude Code
+├── FORYOU.md                           # Plain-language project explainer
 ├── PROJECT_SUMMARY.md                  # Full project overview
 ├── ANCIENT_GLOSSES_VERIFIED.md         # 47+ verified glosses from ancient sources
 ├── CONSENSUS_GLOSSES_FORNI.md          # 43+20+24 consensus glosses (Etruscologists)
 ├── glossary_tripod_complete.md         # Complete Tripod glossary (~1,500 words)
-└── data/                               # Local data (not in repo - see Sources)
+├── src/etruscan_miner/                 # Python package
+│   ├── patterns/                       # Regex patterns for gloss detection
+│   ├── validation/                     # 3-layer ML validation pipeline
+│   ├── corpus/                         # Text acquisition (Perseus, Latin Library, Greek)
+│   └── db/                             # SQLite persistence
+├── scripts/                            # CLI tools
+├── tests/                              # Pytest test suite
+└── data/                               # Local data (not in repo)
+    ├── etruscan_glosses.db             # SQLite database
+    ├── labeled_candidates.json         # ML training data
+    ├── models/                         # Trained classifiers
+    └── corpus/                         # Downloaded texts (~140 MB)
 ```
 
 ## Key Resources
@@ -82,32 +95,56 @@ Target phrases to mine in Latin texts:
 
 ## Methodology
 
-### Phase 1: Pattern Development
-- Define regex patterns for Latin/Greek gloss indicators
-- Test against known positive examples
-- Refine for precision/recall
+### Phase 1: Pattern Development ✅
+- 45+ regex patterns for Latin/Greek gloss indicators
+- Tested against known positive examples (>70% recall)
+- Confidence scores per pattern (0.65-0.95)
 
-### Phase 2: Corpus Mining
-- Access Perseus Digital Library API
-- Run pattern matching across all Latin texts pre-200 CE
-- Extract candidate passages
+### Phase 2: Corpus Mining ✅
+- Perseus CTS API (Latin: Pliny, Livy; Greek: Dionysius, Strabo, Herodotus)
+- Latin Library HTML scraping (100+ texts: Varro, Festus, Isidore)
+- CLTK GitHub repos (~2000 files)
+- CIEW inscription corpus (10,000+ Etruscan words)
 
-### Phase 3: Validation
-- Cross-reference with existing Etruscan vocabulary
-- Check linguistic plausibility
-- Flag for expert review
+### Phase 3: Validation ✅
+- 3-layer ML filter for false positive reduction
+- Cross-reference against known vocabulary
+- Phonotactic plausibility scoring
+- Weighted scoring: pattern (30%) + cross-ref (30%) + linguistic (20%) + context (20%)
 
-### Phase 4: Publication
+### Phase 4: Publication 🔴
 - Document new findings
 - Submit to Etruscological community for verification
 
-## Technical Stack (Planned)
+## Technical Stack (Implemented)
 
-- **Corpus access:** Perseus API, CLTK
-- **NLP:** spaCy, Latin language models
-- **Pattern matching:** regex, custom extractors
-- **Validation:** LLM-assisted semantic analysis
-- **Storage:** SQLite/PostgreSQL
+- **Corpus access:** Perseus CTS API (Latin & Greek), Latin Library HTML scraping, CLTK GitHub repos, CIEW inscription corpus, Hesychius lexicon
+- **Pattern matching:** 45+ regex patterns for Latin/Greek gloss indicators
+- **ML Validation:** 3-layer filter:
+  - Layer 1: spaCy/stanza dependency parsing for Etruscan attribution
+  - Layer 2: Character n-gram word classifier (Etruscan vs Latin)
+  - Layer 3: Context classifier (TF-IDF/embeddings/DistilBERT)
+- **Storage:** SQLite with 10-table schema
+- **Testing:** pytest with 107 tests, >70% recall on known glosses
+
+## Quick Start
+
+```bash
+# Setup
+python scripts/setup_database.py
+python scripts/import_seeds.py
+
+# Download texts
+python scripts/download_all_texts.py --all
+
+# Mine for glosses
+python scripts/mine_glosses.py --corpus latin_library
+python scripts/mine_glosses.py --corpus greek
+
+# Validate and export
+python scripts/validate_candidates.py --use-ml
+python scripts/export_results.py --format markdown -o results/findings.md
+```
 
 ## Contributing
 
@@ -136,4 +173,4 @@ Code: MIT (when implemented)
 
 ---
 
-*Started: January 2026*
+*Started: January 2026 | Last updated: 2026-01-25*

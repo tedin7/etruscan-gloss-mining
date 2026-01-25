@@ -38,8 +38,12 @@ python scripts/download_all_texts.py --latin-library --priority high
 
 # Download from specific source
 python scripts/download_all_texts.py --latin-library  # Latin Library HTML
-python scripts/download_all_texts.py --perseus        # Perseus CTS API
+python scripts/download_all_texts.py --perseus        # Perseus CTS API (Latin)
+python scripts/download_all_texts.py --greek          # Perseus CTS API (Greek)
 python scripts/download_all_texts.py --github         # Clone CLTK repos
+
+# Download Greek texts with Etruscan references
+python scripts/download_all_texts.py --greek --priority high  # Dionysius, Strabo
 
 # Show corpus download statistics
 python scripts/download_all_texts.py --stats
@@ -62,6 +66,9 @@ python scripts/mine_glosses.py --text "Τυρρηνοί καλοῦσι λάρν
 
 # Train word classifier (Layer 2 ML model)
 python scripts/train_word_classifier.py --test --importance
+
+# Train context classifier (Layer 3 ML model)
+python scripts/train_context_classifier.py --test
 
 # Use word classifier
 python -c "from etruscan_miner.validation import WordClassifier; wc = WordClassifier.load(); print(wc.predict('ais'))"
@@ -86,11 +93,12 @@ Perseus API → text_cache.py → mine_glosses.py → candidates table
   - `latin_patterns.py`: 30+ patterns like `tusci_vocant`, `etrusca_lingua`
   - `extractor.py`: `GlossExtractor` class applies patterns, extracts context
 
-- **validation/**: Multi-factor scoring pipeline
+- **validation/**: Multi-factor scoring pipeline (3-layer ML filter)
   - `cross_reference.py`: Matches against known vocabulary (exact/root/similar)
   - `linguistic.py`: Etruscan phonotactic rules (no voiced stops b/d/g, typical endings)
   - `dependency_filter.py`: Layer 1 - spaCy dependency parsing for Etruscan attribution
   - `word_classifier.py`: Layer 2 - Character n-gram ML classifier for Etruscan-like words
+  - `context_classifier.py`: Layer 3 - Context classifier (TF-IDF/embeddings/DistilBERT)
   - `scorer.py`: Combines pattern confidence (30%), cross-ref (30%), linguistic (20%), context (20%)
 
 - **db/**: SQLite persistence
@@ -110,10 +118,13 @@ Perseus API → text_cache.py → mine_glosses.py → candidates table
 - `CONSENSUS_GLOSSES_FORNI.md`: Academic consensus vocabulary (Forni et al.)
 - `data/etruscan_glosses.db`: SQLite database (not in git)
 - `data/latin_vocabulary.txt`: Latin vocabulary for classifier training (~1400 words)
+- `data/labeled_candidates.json`: Labeled training data for context classifier
 - `data/models/word_classifier.pkl`: Trained word classifier model
+- `data/models/context_classifier/`: Trained context classifier model
 - `data/corpus/`: Downloaded texts (not in git, ~140 MB when fully populated)
   - `latin_library/`: HTML files from thelatinlibrary.com
   - `perseus/`: XML from Perseus CTS API
+  - `greek/`: JSON files from Perseus CTS API (Greek texts)
   - `github/`: Cloned CLTK repositories
   - `inscriptions/`: Etruscan inscription corpus (Zenodo CSV + CIEW text)
   - `hesychius/`: Hesychius lexicon extracts

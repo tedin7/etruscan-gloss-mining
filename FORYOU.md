@@ -101,14 +101,17 @@ We don't want to hammer these servers every time we run the pipeline. The `text_
 `scripts/download_all_texts.py` has 100+ hardcoded URLs for high-priority texts. We're not randomly crawling—we know exactly which ancient authors mentioned Etruscan words, so we target them specifically.
 
 ```bash
-# Download everything
+# Download everything (Latin Library + Perseus Latin + Greek + GitHub)
 python scripts/download_all_texts.py --all
 
 # Just high-priority Latin texts
 python scripts/download_all_texts.py --latin-library --priority high
 
-# Greek corpus
-python scripts/download_all_texts.py --perseus-greek
+# Greek corpus (Dionysius, Strabo, Herodotus, Plutarch)
+python scripts/download_all_texts.py --greek --priority high
+
+# See what's been downloaded
+python scripts/download_all_texts.py --stats
 
 # Import inscription vocabulary (10,000+ words!)
 python scripts/import_inscriptions.py
@@ -241,7 +244,11 @@ This one's fancier—it supports three backends with automatic fallback:
 2. **Sentence embeddings** (good, requires `sentence-transformers`)
 3. **TF-IDF + Logistic Regression** (baseline, just needs `scikit-learn`)
 
-The classifier is trained on labeled examples: contexts that experts marked as "yes, this is genuinely discussing an Etruscan word" vs "no, this is generic etymology or noise."
+The classifier is trained on labeled examples in `data/labeled_candidates.json`: contexts marked as `true_etruscan` (genuine Etruscan etymology discussions) vs `false_positive` (generic Latin etymology or geographic mentions).
+
+The labeling criteria:
+- **true_etruscan**: Explicit "Tusci/Etrusci vocant/appellant" pattern, word attributed TO Etruscan language
+- **false_positive**: Geographic mentions ("in Etruria"), generic Latin etymology ("dictum quod"), common Latin/Greek words
 
 ```python
 from etruscan_miner.validation import ContextClassifier
@@ -274,17 +281,18 @@ Any layer can veto a candidate. This dramatically reduces false positives—we s
 The classifiers come pre-trained, but you can improve them:
 
 ```bash
-# Label some candidates manually
-python scripts/label_candidates.py
-
-# Retrain word classifier
+# Retrain word classifier (uses data/latin_vocabulary.txt + inscription corpus)
 python scripts/train_word_classifier.py --test --importance
 
-# Retrain context classifier
-python scripts/train_context_classifier.py
+# Retrain context classifier (uses data/labeled_candidates.json)
+python scripts/train_context_classifier.py --test
 ```
 
-The `label_candidates.py` script shows you candidates and lets you mark them as "etruscan" or "latin". This creates training data for the classifiers.
+The training data files:
+- **Word classifier**: Etruscan words from inscription corpus vs Latin words from `data/latin_vocabulary.txt`
+- **Context classifier**: Labeled contexts in `data/labeled_candidates.json` (65+ examples with `true_etruscan` vs `false_positive` labels)
+
+To add more training data for the context classifier, edit `data/labeled_candidates.json` directly—it's human-readable JSON with the context, label, and reasoning for each example.
 
 ---
 
@@ -435,13 +443,15 @@ The foundation is solid. The patterns work. The ML filter catches most garbage. 
 | Set up fresh database | `python scripts/setup_database.py` |
 | Import seed data | `python scripts/import_seeds.py` |
 | Download all texts | `python scripts/download_all_texts.py --all` |
+| Download Greek texts | `python scripts/download_all_texts.py --greek` |
+| Check corpus stats | `python scripts/download_all_texts.py --stats` |
 | Import inscriptions | `python scripts/import_inscriptions.py` |
-| Mine Latin texts | `python scripts/mine_glosses.py --work varro_de_lingua_latina` |
+| Mine Latin Library | `python scripts/mine_glosses.py --corpus latin_library` |
 | Mine Greek texts | `python scripts/mine_glosses.py --corpus greek` |
 | Test a specific word | `python scripts/validate_candidates.py --word aisar` |
 | Validate with ML | `python scripts/validate_candidates.py --use-ml` |
 | Train word classifier | `python scripts/train_word_classifier.py --test` |
-| Label training data | `python scripts/label_candidates.py` |
+| Train context classifier | `python scripts/train_context_classifier.py --test` |
 | Run all tests | `python -m pytest tests/ -v` |
 | Export results | `python scripts/export_results.py --format markdown -o output.md` |
 
