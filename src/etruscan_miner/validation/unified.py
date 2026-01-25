@@ -53,7 +53,7 @@ class UnifiedScore:
     final_score: float  # 0.0 - 1.0
     methods_confirmed: int  # how many of 9 methods passed (score >= 0.5)
     recommendation: str  # 'accept', 'review', 'reject'
-    confidence_level: str  # 'high', 'medium', 'low'
+    confidence_level: str  # 'high', 'medium', 'low', 'false_positive'
 
     # Component scores (all 0.0 - 1.0)
     pattern_score: float = 0.0
@@ -158,9 +158,15 @@ class UnifiedValidator:
 
     Combines the validation approaches from both the validate and verify
     commands into a unified 9-method scoring system.
+
+    IMPORTANT: This validator includes filters to avoid false positives:
+    1. KNOWN_ETYMOLOGIES - Words already documented as Etruscan in major sources
+    2. LATIN_SUFFIXES - Latin derivational suffixes (not loanwords)
+    3. Metalanguage detection - Distinguishes mentions from actual borrowings
+    4. Direction-of-borrowing validation
     """
 
-    # Known Etruscan loanwords for reference
+    # Known Etruscan loanwords for reference (already published)
     KNOWN_LOANS = {
         'histrio', 'histriones', 'persona', 'personae',
         'haruspex', 'haruspices', 'lanista', 'lanistae',
@@ -171,12 +177,135 @@ class UnifiedValidator:
         'spurius', 'elementum', 'elementa', 'mundus',
     }
 
+    # Words whose Etruscan origin is ALREADY KNOWN in major etymological sources
+    # (de Vaan 2008, Walde-Hoffmann, Etymology Online, etc.)
+    # Finding these is cataloguing, not discovery
+    KNOWN_ETYMOLOGIES = {
+        # Gods/religion
+        'mercurius', 'mercury', 'juno', 'minerva', 'vertumnus',
+        'voltumna', 'nortia', 'mantus', 'mania',
+        # Theatre/performance
+        'histrio', 'histriones', 'persona', 'scaena',
+        'ludus', 'ludio', 'ludia',
+        # Religious officials
+        'haruspex', 'lanista', 'lucumo', 'camillus', 'camilla',
+        # Architecture
+        'atrium', 'fenestra', 'antenna',
+        # Other well-documented loans
+        'subulo', 'balteus', 'catena', 'spurius',
+        'elementum', 'mantisa', 'satelles', 'lar', 'lares',
+    }
+
+    # Latin suffixes - if word ends with these, it's Latin-derived, NOT Etruscan
+    # These create Latin words ABOUT Etruscan things, not Etruscan loanwords
+    LATIN_SUFFIXES = {
+        'icus', 'icum', 'ica',  # Latin adjective suffix (Tuscanicum, Etruscus)
+        'anus', 'anum', 'ana',  # Latin adjective (Romanus, Tuscanus)
+        'inus', 'inum', 'ina',  # Latin adjective (Latinus)
+        'ensis', 'ense',        # Latin locative (Atheniensis)
+        'arius', 'arium',       # Latin agent/place (librarius)
+        'osus', 'osum', 'osa',  # Latin full-of (gloriosus)
+        'bilis', 'bile',        # Latin capability (amabilis)
+        'tio', 'tionis',        # Latin verbal noun (actio)
+        'tor', 'toris',         # Latin agent (actor)
+        'tas', 'tatis',         # Latin abstract (libertas)
+    }
+
+    # Latin words ABOUT Etruscan things (not loanwords FROM Etruscan)
+    LATIN_ABOUT_ETRUSCAN = {
+        'tuscanicus', 'tuscanicum', 'tuscanus', 'tuscana',
+        'etruscus', 'etrusca', 'etruscum',
+        'tyrrhenus', 'tyrrhena', 'tyrrhenum',
+        'tuscus', 'tusca', 'tuscum',
+        'latinus', 'latina', 'latinum',
+    }
+
+    # Common Latin words that are definitely NOT Etruscan loanwords
+    # These are often captured by pattern errors (e.g., grabbing the Latin gloss)
+    COMMON_LATIN_WORDS = {
+        # Pronouns
+        'qui', 'quae', 'quod', 'quis', 'quid', 'hic', 'haec', 'hoc',
+        'ille', 'illa', 'illud', 'is', 'ea', 'id', 'ipse', 'ipsa',
+        'se', 'sibi', 'sui', 'eos', 'eius', 'eorum', 'cui', 'cuius',
+        # Verbs (core Latin)
+        'est', 'sunt', 'esse', 'fuit', 'erat', 'sit', 'sint',
+        'habet', 'habent', 'dicit', 'dicunt', 'vocat', 'vocant',
+        'facit', 'fecit', 'fieri', 'fit', 'appellat', 'appellatur',
+        # Conjunctions/particles
+        'et', 'sed', 'aut', 'vel', 'uel', 'nec', 'neque', 'atque', 'ac',
+        'ita', 'sic', 'tam', 'tamen', 'igitur', 'ergo', 'autem',
+        'ut', 'nam', 'quoque', 'nisi', 'sane', 'tum', 'etiam',
+        # Prepositions
+        'in', 'ex', 'de', 'ad', 'per', 'pro', 'cum', 'ab', 'inter',
+        # Basic nouns that are core Latin
+        'deus', 'dea', 'deo', 'dei', 'deum', 'homo', 'res', 'dies',
+        'rex', 'regis', 'urbs', 'urbis', 'annus', 'annos', 'anno', 'anni',
+        'pater', 'patris', 'mater', 'matris', 'filius', 'filia',
+        'vir', 'viri', 'mulier', 'femina', 'populus', 'populi',
+        'nomen', 'nominis', 'genus', 'generis', 'gens', 'gentis',
+        # Adjectives
+        'magnus', 'magna', 'magnum', 'bonus', 'bona', 'bonum',
+        'primus', 'prima', 'primum', 'unus', 'una', 'unum',
+        'natus', 'nata', 'natum', 'dictus', 'dicta', 'dictum',
+        # Numbers
+        'duo', 'tres', 'quattuor', 'quinque', 'sex', 'septem',
+        # Question words often mis-extracted
+        'unde', 'cur', 'quare', 'quando', 'quomodo', 'ubi',
+        # Roman names (definitely not Etruscan loanwords)
+        'augustus', 'caesar', 'tiberius', 'claudius', 'nero',
+        'fabius', 'manlius', 'marcus', 'gaius', 'lucius', 'publius',
+        'cornelius', 'iulius', 'julius', 'servius', 'tullius',
+        'romulus', 'remus', 'numa', 'tarquinius', 'brutus',
+        'iunius', 'junius', 'sempronius', 'sulpicius', 'marcius',
+        # Common Latin adjectives
+        'felix', 'felicem', 'felicis', 'infelix',
+        'populos', 'populum',
+        # Common Latin nouns that aren't loans
+        'regula', 'vela', 'velum', 'lappa', 'dividere', 'iduare',
+        # Terms for non-Roman peoples (Latin terms, not loans)
+        'latinis', 'latini', 'latinus', 'graeci', 'graecus',
+    }
+
+    # More known loanwords to add to KNOWN_ETYMOLOGIES
+    # (lanterna, plumbum are documented Etruscan > Latin)
+    ADDITIONAL_KNOWN = {
+        'lanterna', 'lanternam', 'plumbum', 'plumbi',
+        'ister', 'hister', 'lentis', 'lens',
+    }
+
     # Confidence thresholds
     CONFIDENCE_HIGH = 0.85
     CONFIDENCE_MEDIUM = 0.65
 
     # Isidore penalty factor
     ISIDORE_PENALTY = 0.6
+
+    # Rejection reasons
+    REJECT_KNOWN_ETYMOLOGY = "known_etymology"
+    REJECT_LATIN_DERIVED = "latin_derived"
+    REJECT_LATIN_ABOUT = "latin_about_etruscan"
+    REJECT_METALANGUAGE = "metalanguage_mention"
+    REJECT_COMMON_LATIN = "common_latin"
+    REJECT_TOO_SHORT = "too_short"
+    REJECT_ENGLISH = "english_word"
+
+    # English words that get captured from translations
+    COMMON_ENGLISH_WORDS = {
+        'the', 'and', 'for', 'are', 'but', 'not', 'you', 'all',
+        'can', 'had', 'her', 'was', 'one', 'our', 'out', 'him',
+        'has', 'his', 'how', 'its', 'may', 'new', 'now', 'old',
+        'see', 'way', 'who', 'boy', 'did', 'get', 'let', 'put',
+        'say', 'she', 'too', 'use', 'or', 'on', 'in', 'be', 'we',
+        'no', 'an', 'as', 'at', 'by', 'if', 'is', 'it', 'so', 'up',
+        'go', 'do', 'he', 'me', 'my', 'of', 'to', 'us', 'then',
+        'there', 'were', 'when', 'with', 'from', 'have', 'this',
+        'they', 'been', 'that', 'which', 'their', 'what', 'about',
+        'nice', 'good', 'great', 'very', 'just', 'many', 'some',
+        'could', 'would', 'should', 'being', 'other', 'these',
+    }
+
+    # Minimum word length for consideration
+    MIN_WORD_LENGTH = 3
 
     def __init__(
         self,
@@ -308,6 +437,124 @@ class UnifiedValidator:
         markers = ["isidore", "isidor", "etymologiae", "etym.", "isid."]
         return any(marker in context_lower for marker in markers)
 
+    def _is_known_etymology(self, word: str) -> bool:
+        """Check if word's Etruscan origin is already documented.
+
+        These words are in major etymological dictionaries (de Vaan, Walde-Hoffmann).
+        Finding them is cataloguing existing knowledge, not discovery.
+        """
+        word_lower = word.lower()
+        return (word_lower in self.KNOWN_ETYMOLOGIES or
+                word_lower in self.ADDITIONAL_KNOWN)
+
+    def _has_latin_suffix(self, word: str) -> tuple[bool, str]:
+        """Check if word has Latin derivational suffix.
+
+        Words like TUSCANICUM are Latin adjectives created FROM Latin roots,
+        not Etruscan words borrowed INTO Latin.
+        """
+        word_lower = word.lower()
+        for suffix in self.LATIN_SUFFIXES:
+            if word_lower.endswith(suffix) and len(word_lower) > len(suffix) + 2:
+                return True, suffix
+        return False, ""
+
+    def _is_latin_about_etruscan(self, word: str) -> bool:
+        """Check if word is a Latin term ABOUT Etruscan things.
+
+        These are Latin-derived words describing Etruscan culture,
+        not Etruscan words borrowed into Latin.
+        """
+        return word.lower() in self.LATIN_ABOUT_ETRUSCAN
+
+    def _is_metalanguage(self, word: str, context: str) -> tuple[bool, str]:
+        """Detect if this is metalanguage (author DISCUSSING Etruscan) vs actual loan.
+
+        Patterns like "X Etrusca lingua dicitur" often mean the author is
+        discussing the Etruscan word X, not that X was borrowed into Latin.
+
+        Returns:
+            (is_metalanguage, reason)
+        """
+        if not context:
+            return False, ""
+
+        context_lower = context.lower()
+        word_lower = word.lower()
+
+        # Metalanguage patterns - author is DISCUSSING etymology, not using loanword
+        metalanguage_patterns = [
+            # Direct etymology discussion
+            ("dicitur etrusca", "etymology discussion"),
+            ("etrusca lingua dicitur", "etymology discussion"),
+            ("appellatur etrusca", "etymology discussion"),
+            ("vocatur etrusca", "etymology discussion"),
+            # Origin discussion (not current usage)
+            ("ortum est", "origin discussion"),
+            ("origo est", "origin discussion"),
+            ("origine etrusca", "origin discussion"),
+            ("ex etrusco", "origin discussion"),
+            ("ab etruscis", "origin discussion"),
+            # Scholarly attribution
+            ("ut aiunt", "scholarly hedging"),
+            ("ferunt", "scholarly hedging"),
+            ("tradunt", "scholarly hedging"),
+            ("quidam putant", "scholarly hedging"),
+        ]
+
+        for pattern, reason in metalanguage_patterns:
+            if pattern in context_lower:
+                return True, reason
+
+        return False, ""
+
+    def _check_false_positive(self, word: str, context: str) -> tuple[bool, str, str]:
+        """Pre-validation check for common false positive patterns.
+
+        Returns:
+            (is_false_positive, rejection_type, reason)
+        """
+        word_lower = word.lower()
+
+        # -2. Check minimum length
+        if len(word) < self.MIN_WORD_LENGTH:
+            return True, self.REJECT_TOO_SHORT, \
+                f"'{word}' too short ({len(word)} chars) - likely extraction fragment"
+
+        # -1. Check for English words (from translations)
+        if word_lower in self.COMMON_ENGLISH_WORDS:
+            return True, self.REJECT_ENGLISH, \
+                f"'{word}' is an English word (pattern matched translation, not Latin)"
+
+        # 0. Check for common Latin words (pattern extraction errors)
+        if word_lower in self.COMMON_LATIN_WORDS:
+            return True, self.REJECT_COMMON_LATIN, \
+                f"'{word}' is a common Latin word (likely pattern extraction error)"
+
+        # 1. Check if etymology already known
+        if self._is_known_etymology(word):
+            return True, self.REJECT_KNOWN_ETYMOLOGY, \
+                f"Etruscan origin of '{word}' already documented in major sources"
+
+        # 2. Check for Latin derivational suffixes
+        has_suffix, suffix = self._has_latin_suffix(word)
+        if has_suffix:
+            return True, self.REJECT_LATIN_DERIVED, \
+                f"'{word}' has Latin suffix '-{suffix}' (Latin word ABOUT Etruscan, not FROM)"
+
+        # 3. Check if Latin word about Etruscan
+        if self._is_latin_about_etruscan(word):
+            return True, self.REJECT_LATIN_ABOUT, \
+                f"'{word}' is a Latin term describing Etruscan culture, not a loanword"
+
+        # 4. Check for metalanguage
+        is_meta, meta_reason = self._is_metalanguage(word, context)
+        if is_meta:
+            return True, self.REJECT_METALANGUAGE, \
+                f"Context suggests etymology discussion ({meta_reason}), not active loanword"
+
+        return False, "", ""
+
     def _calculate_context_score(self, context: str) -> float:
         """Calculate contextual coherence score (rule-based fallback)."""
         if not context:
@@ -340,6 +587,7 @@ class UnifiedValidator:
         word: str,
         context: str = "",
         pattern_confidence: float = 0.0,
+        strict_mode: bool = True,
     ) -> UnifiedScore:
         """Run ALL validation methods and return unified score.
 
@@ -347,12 +595,28 @@ class UnifiedValidator:
             word: The word to validate
             context: Surrounding context (optional)
             pattern_confidence: Confidence from pattern extraction (0.0 - 1.0)
+            strict_mode: If True, reject known etymologies and Latin-derived words
 
         Returns:
             UnifiedScore with all method scores and final recommendation
         """
         word_lower = word.lower()
         ml_scores = {}
+
+        # FALSE POSITIVE CHECK (strict mode)
+        # This prevents cataloguing known connections as "discoveries"
+        if strict_mode:
+            is_fp, fp_type, fp_reason = self._check_false_positive(word, context)
+            if is_fp:
+                return UnifiedScore(
+                    word=word,
+                    final_score=0.0,
+                    methods_confirmed=0,
+                    recommendation="reject",
+                    confidence_level="false_positive",
+                    pattern_score=pattern_confidence,
+                    ml_rejection_reason=f"FALSE POSITIVE ({fp_type}): {fp_reason}",
+                )
 
         # Check if known loan
         known_loan = word_lower in self.KNOWN_LOANS
