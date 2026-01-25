@@ -241,37 +241,110 @@ def mine_from_cache(
     return mine_work(work_key, repo, extractor, passages, min_confidence)
 
 
+def mine_github_repo(
+    repo: Repository,
+    extractor: GlossExtractor,
+    repo_name: str,
+    language: str = "latin",
+    min_confidence: float = 0.0,
+    extensions: tuple = (".txt",),
+) -> tuple[int, int]:
+    """Mine any GitHub CLTK corpus repository.
+
+    Args:
+        repo: Database repository
+        extractor: Gloss extractor
+        repo_name: Name of the repo directory (e.g., "lat_text_latin_library")
+        language: Language of texts ("latin" or "greek")
+        min_confidence: Minimum pattern confidence
+        extensions: File extensions to process
+    """
+    import re
+    corpus_dir = CORPUS_CACHE_DIR / "github" / repo_name
+
+    if not corpus_dir.exists():
+        print(f"No {repo_name} found. Clone it first.")
+        return 0, 0
+
+    # Find all text files
+    files = []
+    for ext in extensions:
+        files.extend(corpus_dir.rglob(f"*{ext}"))
+    # Filter out English translations (we want Latin/Greek only)
+    files = [f for f in files if "_eng" not in f.name.lower()]
+    files = sorted(files)
+
+    if not files:
+        print(f"No files found in {repo_name}")
+        return 0, 0
+
+    def strip_xml(text: str) -> str:
+        """Remove XML tags and extract text content."""
+        # Remove XML declarations and processing instructions
+        text = re.sub(r'<\?[^?]*\?>', '', text)
+        # Remove comments
+        text = re.sub(r'<!--.*?-->', '', text, flags=re.DOTALL)
+        # Remove all XML tags
+        text = re.sub(r'<[^>]+>', ' ', text)
+        # Decode common XML entities
+        text = text.replace('&lt;', '<').replace('&gt;', '>')
+        text = text.replace('&amp;', '&').replace('&quot;', '"')
+        # Normalize whitespace
+        text = re.sub(r'\s+', ' ', text).strip()
+        return text
+
+    def iter_texts():
+        for path in files:
+            try:
+                text = path.read_text(encoding="utf-8", errors="replace")
+
+                # Strip XML if needed
+                if path.suffix == ".xml":
+                    text = strip_xml(text)
+                else:
+                    text = re.sub(r"\s+", " ", text).strip()
+
+                # Skip empty or very short texts
+                if len(text) < 100:
+                    continue
+
+                # Parse author from path
+                relative = path.relative_to(corpus_dir)
+                parts = list(relative.parts)
+                author = parts[0].title() if len(parts) > 1 else "Unknown"
+                title = path.stem
+
+                yield TextItem(
+                    text=text,
+                    reference=f"{author}/{path.name}",
+                    author=author,
+                    title=title,
+                    urn=f"{repo_name}:{path.name}",
+                    priority="LOW",
+                    source_url=str(path),
+                    language=language,
+                )
+            except Exception as e:
+                print(f"Error reading {path}: {e}")
+                continue
+
+    return mine_texts(
+        repo, extractor, iter_texts(),
+        source_name=repo_name,
+        total_count=len(files),
+        min_confidence=min_confidence,
+        progress_interval=200,
+    )
+
+
 def mine_github_corpus(
     repo: Repository,
     extractor: GlossExtractor,
     min_confidence: float = 0.0,
 ) -> tuple[int, int]:
     """Mine the GitHub CLTK Latin Library corpus."""
-    reader = GitHubCorpusReader()
-    total_files = reader.count_files()
-
-    if total_files == 0:
-        print("No GitHub corpus files found. Run download_all_texts.py --github first.")
-        return 0, 0
-
-    def iter_github_texts():
-        for github_text in reader.iter_texts():
-            yield TextItem(
-                text=github_text.text,
-                reference=f"{github_text.author}/{github_text.filename}",
-                author=github_text.author,
-                title=github_text.title,
-                urn=f"github:{github_text.filename}",
-                priority="LOW",
-                source_url=str(github_text.file_path),
-            )
-
-    return mine_texts(
-        repo, extractor, iter_github_texts(),
-        source_name="GitHub CLTK corpus",
-        total_count=total_files,
-        min_confidence=min_confidence,
-        progress_interval=200,
+    return mine_github_repo(
+        repo, extractor, "lat_text_latin_library", "latin", min_confidence
     )
 
 
@@ -495,8 +568,12 @@ def main():
     )
     parser.add_argument(
         "--corpus",
-        choices=["github", "latin_library", "greek", "all"],
-        help="Mine from a specific corpus source",
+        choices=[
+            "github", "latin_library", "greek",
+            "lat_perseus", "grc_perseus", "lacus_curtius",
+            "all", "all_latin", "all_greek"
+        ],
+        help="Mine from a specific corpus source (all=everything, all_latin=all Latin, all_greek=all Greek)",
     )
     parser.add_argument(
         "--greek-work",
@@ -558,19 +635,46 @@ def main():
         total_scanned = 0
         total_found = 0
 
-        if args.corpus in ["github", "all"]:
+        # Latin corpora
+        latin_corpora = ["github", "latin_library", "lat_perseus", "lacus_curtius"]
+        greek_corpora = ["greek", "grc_perseus"]
+
+        if args.corpus in ["github", "all", "all_latin"]:
             scanned, found = mine_github_corpus(repo, extractor, args.min_confidence)
             total_scanned += scanned
             total_found += found
 
-        if args.corpus in ["latin_library", "all"]:
+        if args.corpus in ["latin_library", "all", "all_latin"]:
             scanned, found = mine_latin_library(repo, extractor, args.min_confidence)
             total_scanned += scanned
             total_found += found
 
-        if args.corpus in ["greek", "all"]:
+        if args.corpus in ["lat_perseus", "all", "all_latin"]:
+            scanned, found = mine_github_repo(
+                repo, extractor, "lat_text_perseus", "latin", args.min_confidence,
+                extensions=(".xml",),
+            )
+            total_scanned += scanned
+            total_found += found
+
+        if args.corpus in ["lacus_curtius", "all", "all_latin"]:
+            scanned, found = mine_github_repo(
+                repo, extractor, "latin_text_lacus_curtius", "latin", args.min_confidence
+            )
+            total_scanned += scanned
+            total_found += found
+
+        if args.corpus in ["greek", "all", "all_greek"]:
             scanned, found = mine_greek_corpus(
                 repo, extractor, args.min_confidence, args.greek_work
+            )
+            total_scanned += scanned
+            total_found += found
+
+        if args.corpus in ["grc_perseus", "all", "all_greek"]:
+            scanned, found = mine_github_repo(
+                repo, extractor, "grc_text_perseus", "greek", args.min_confidence,
+                extensions=(".txt", ".xml"),
             )
             total_scanned += scanned
             total_found += found
