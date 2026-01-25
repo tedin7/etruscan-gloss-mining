@@ -1,0 +1,536 @@
+{
+  "description": "Labeled candidates for context classifier training",
+  "created": "2026-01-25",
+  "labels": {
+    "true_etruscan": "Context genuinely discusses Etruscan etymology or explicitly attributes word to Etruscan/Tuscan language",
+    "false_positive": "Just mentions Etruria geographically, is generic Latin etymology, or common Latin/Greek word"
+  },
+  "examples": [
+    {
+      "id": 2,
+      "word": "Tuscanicum",
+      "full_match": "Tuscanicum dictum a Tuscis",
+      "context": "Tuscanicum dictum a Tuscis, posteaquam illorum cavum aedium simulare coeperunt. Atrium appellatum ab Atriatibus Tuscis",
+      "label": "true_etruscan",
+      "reason": "Explicitly states 'dictum a Tuscis' - named from the Tuscans"
+    },
+    {
+      "id": 3,
+      "word": "Idus",
+      "full_match": "Sabini Idus dicunt",
+      "context": "Idus ab eo quod Tusci Itus, vel potius quod Sabini Idus dicunt",
+      "label": "true_etruscan",
+      "reason": "Context explicitly mentions 'quod Tusci Itus' - Tuscans call it Itus"
+    },
+    {
+      "id": 5,
+      "word": "Subulo",
+      "full_match": "Subulo dictus, quod ita dicunt tibicines Tusci",
+      "context": "Subulo dictus, quod ita dicunt tibicines Tusci: quocirca radices eius in Etruria, non Latio quaerundae",
+      "label": "true_etruscan",
+      "reason": "Explicitly states 'dicunt tibicines Tusci' - Tuscan pipe players call it this"
+    },
+    {
+      "id": 42,
+      "word": "notatum",
+      "full_match": "litteris Tuscis notatum",
+      "context": "in loco fundamenti caput hominis litteris Tuscis notatum invenit, et proinde Capitolium appellavit",
+      "label": "true_etruscan",
+      "reason": "Explicitly mentions 'litteris Tuscis' - written in Tuscan letters"
+    },
+    {
+      "id": 180,
+      "word": "ister",
+      "full_match": "ister Tusco verbo",
+      "context": "Vernaculis artificibus, quia ister Tusco verbo ludio vocabatur, nomen histrionibus inditum",
+      "label": "true_etruscan",
+      "reason": "Explicitly states 'Tusco verbo' - by Tuscan word, ister is the Etruscan word for actor"
+    },
+    {
+      "id": 181,
+      "word": "ludio",
+      "full_match": "Tusco verbo ludio",
+      "context": "quia ister Tusco verbo ludio vocabatur, nomen histrionibus inditum",
+      "label": "true_etruscan",
+      "reason": "Explicitly states 'Tusco verbo ludio' - ludio is the Tuscan word"
+    },
+    {
+      "id": 1,
+      "word": "Amictui",
+      "full_match": "Amictui dictum quod",
+      "context": "Amictui dictum quod ambiectum est, id est circumiectum",
+      "label": "false_positive",
+      "reason": "Generic Latin etymology 'dictum quod' - no Etruscan attribution"
+    },
+    {
+      "id": 6,
+      "word": "tibicines",
+      "full_match": "ita dicunt tibicines Tusci",
+      "context": "quod ita dicunt tibicines Tusci",
+      "label": "false_positive",
+      "reason": "tibicines is Latin for 'pipe players', not an Etruscan word - the Etruscan word here is subulo"
+    },
+    {
+      "id": 7,
+      "word": "eius",
+      "full_match": "eius in Etruria",
+      "context": "quocirca radices eius in Etruria, non Latio quaerundae",
+      "label": "false_positive",
+      "reason": "Geographic mention 'in Etruria', eius is Latin pronoun 'his/her'"
+    },
+    {
+      "id": 8,
+      "word": "autem",
+      "full_match": "autem dictum quod",
+      "context": "Tympanum autem dictum quod medium est",
+      "label": "false_positive",
+      "reason": "autem is Latin 'however', generic etymology pattern"
+    },
+    {
+      "id": 9,
+      "word": "Pessaria",
+      "full_match": "Pessaria dicta quod",
+      "context": "Pessaria dicta quod intus iniciantur",
+      "label": "false_positive",
+      "reason": "Greek medical term, no Etruscan connection"
+    },
+    {
+      "id": 10,
+      "word": "Enchiridion",
+      "full_match": "Enchiridion dictum quod",
+      "context": "Enchiridion dictum quod manu adstringatur",
+      "label": "false_positive",
+      "reason": "Greek term, explicitly mentions CHEIR Graece"
+    },
+    {
+      "id": 11,
+      "word": "Falsitas",
+      "full_match": "Falsitas appellata a",
+      "context": "Falsitas appellata a fando aliud quam verum est",
+      "label": "false_positive",
+      "reason": "Latin word, generic etymology"
+    },
+    {
+      "id": 12,
+      "word": "Poena",
+      "full_match": "Poena dicta quod",
+      "context": "Poena dicta quod puniat",
+      "label": "false_positive",
+      "reason": "Latin word, generic etymology"
+    },
+    {
+      "id": 13,
+      "word": "autem",
+      "full_match": "autem dictum quod",
+      "context": "Ver autem dictum quod viret",
+      "label": "false_positive",
+      "reason": "autem is Latin conjunction, generic etymology"
+    },
+    {
+      "id": 16,
+      "word": "autem",
+      "full_match": "autem vocatur quod",
+      "context": "Celebritas autem vocatur quod",
+      "label": "false_positive",
+      "reason": "Latin word, generic etymology"
+    },
+    {
+      "id": 17,
+      "word": "Oblatio",
+      "full_match": "Oblatio vocatur quia",
+      "context": "Oblatio vocatur quia offertur",
+      "label": "false_positive",
+      "reason": "Latin liturgical term, no Etruscan connection"
+    },
+    {
+      "id": 19,
+      "word": "Trinitas",
+      "full_match": "Trinitas appellata quod",
+      "context": "Trinitas appellata quod fiat totum unum ex quibusdam tribus",
+      "label": "false_positive",
+      "reason": "Latin theological term, no Etruscan connection"
+    },
+    {
+      "id": 20,
+      "word": "Spes",
+      "full_match": "Spes vocata quod",
+      "context": "Spes vocata quod sit pes progrediendi",
+      "label": "false_positive",
+      "reason": "Latin word, folk etymology"
+    },
+    {
+      "id": 21,
+      "word": "ideo",
+      "full_match": "ideo dictum quod",
+      "context": "Antichristum ideo dictum quod ante Christum venturus sit",
+      "label": "false_positive",
+      "reason": "ideo is Latin 'therefore', no Etruscan connection"
+    },
+    {
+      "id": 22,
+      "word": "Iscurra",
+      "full_match": "Iscurra vocatur quia",
+      "context": "Iscurra vocatur quia causa escae quempiam consectatur",
+      "label": "false_positive",
+      "reason": "Latin/Greek term, no Etruscan attribution"
+    },
+    {
+      "id": 28,
+      "word": "Tonitruum",
+      "full_match": "Tonitruum dictum quod",
+      "context": "Tonitruum dictum quod sonus eius terreat",
+      "label": "false_positive",
+      "reason": "Latin word, etymology from tonus"
+    },
+    {
+      "id": 29,
+      "word": "Grando",
+      "full_match": "Grando appellata quod",
+      "context": "Grando appellata quod forma eius granorum similitudinem habeat",
+      "label": "false_positive",
+      "reason": "Latin word, no Etruscan connection"
+    },
+    {
+      "id": 30,
+      "word": "Aqua",
+      "full_match": "Aqua dicta quod",
+      "context": "Aqua dicta quod superficies eius aequalis sit",
+      "label": "false_positive",
+      "reason": "Latin word, folk etymology"
+    },
+    {
+      "id": 35,
+      "word": "Italiae",
+      "full_match": "Italiae dicta quod",
+      "context": "Etruria pars Italiae dicta quod eius fines tendebantur usque ad ripam Tiberis",
+      "label": "false_positive",
+      "reason": "Geographic mention, discussing region not Etruscan language"
+    },
+    {
+      "id": 44,
+      "word": "Cella",
+      "full_match": "Cella dicta quod",
+      "context": "Cella dicta quod nos occultat et celat",
+      "label": "false_positive",
+      "reason": "Latin word, generic etymology"
+    },
+    {
+      "id": 46,
+      "word": "Fundamentum",
+      "full_match": "Fundamentum dictum quod",
+      "context": "Fundamentum dictum quod fundus sit domui",
+      "label": "false_positive",
+      "reason": "Latin word, generic etymology"
+    },
+    {
+      "id": 54,
+      "word": "Vitrum",
+      "full_match": "Vitrum dictum quod",
+      "context": "Vitrum dictum quod visui perspicuitate transluceat",
+      "label": "false_positive",
+      "reason": "Latin word, generic etymology"
+    },
+    {
+      "id": 58,
+      "word": "Ferrum",
+      "full_match": "Ferrum dictum quod",
+      "context": "Ferrum dictum quod farra, id est semina frugum, terrae condeat",
+      "label": "false_positive",
+      "reason": "Latin word, generic etymology"
+    },
+    {
+      "id": 67,
+      "word": "Vitis",
+      "full_match": "Vitis dicta quod",
+      "context": "Vitis dicta quod vim habeat citius radicandi",
+      "label": "false_positive",
+      "reason": "Latin word, generic etymology"
+    },
+    {
+      "id": 70,
+      "word": "Graecis",
+      "full_match": "Graecis dictum quod",
+      "context": "Malum a Graecis dictum quod sit fructus",
+      "label": "false_positive",
+      "reason": "Greek attribution, not Etruscan"
+    },
+    {
+      "id": 91,
+      "word": "Graece",
+      "full_match": "Graece dicta quod",
+      "context": "Artemisia Graece dicta quod Diana ARTEMIS dicitur",
+      "label": "false_positive",
+      "reason": "Greek attribution, not Etruscan"
+    },
+    {
+      "id": 111,
+      "word": "bellum",
+      "full_match": "bellum vocatur quod",
+      "context": "bellum vocatur quod contra hostes agitur",
+      "label": "false_positive",
+      "reason": "Latin word, generic etymology"
+    },
+    {
+      "id": 113,
+      "word": "transvenas",
+      "full_match": "transvenas in Etruria",
+      "context": "Lydios ex Asia transvenas in Etruria consedisse duce Tyrreno",
+      "label": "false_positive",
+      "reason": "Geographic/historical mention about Lydians settling in Etruria"
+    },
+    {
+      "id": 114,
+      "word": "Igitur",
+      "full_match": "Igitur in Etruria",
+      "context": "Igitur in Etruria inter ceteros ritus superstitionum",
+      "label": "false_positive",
+      "reason": "igitur is Latin 'therefore', geographic context only"
+    },
+    {
+      "id": 161,
+      "word": "Natus",
+      "full_match": "Natus in Etruria",
+      "context": "Natus in Etruria Volaterris, eques Romanus",
+      "label": "false_positive",
+      "reason": "Geographic mention - born in Etruria"
+    },
+    {
+      "id": 164,
+      "word": "non",
+      "full_match": "non in Etruria",
+      "context": "frumentum coemendum, non in Etruria modo dextris ab Ostia",
+      "label": "false_positive",
+      "reason": "Geographic mention, non is Latin 'not'"
+    },
+    {
+      "id": 165,
+      "word": "Trepidatum",
+      "full_match": "Trepidatum in Etruria",
+      "context": "Trepidatum in Etruria est post Fidenas captas",
+      "label": "false_positive",
+      "reason": "Latin word, geographic context - alarm in Etruria"
+    },
+    {
+      "id": 183,
+      "word": "annos",
+      "full_match": "annos in Etruria",
+      "context": "per eos annos in Etruria, in Umbria Gallis hostibus adiunctis",
+      "label": "false_positive",
+      "reason": "Latin word, geographic context about campaigns in Etruria"
+    },
+    {
+      "id": 193,
+      "word": "extemplo",
+      "full_match": "extemplo in Etruria",
+      "context": "extemplo in Etruria ad legiones proficisci iussit",
+      "label": "false_positive",
+      "reason": "Latin adverb 'immediately', geographic context"
+    },
+    {
+      "id": 250,
+      "word": "ignobilis",
+      "full_match": "ignobilis in Etruria",
+      "context": "Graecus ignobilis in Etruria primum venit",
+      "label": "false_positive",
+      "reason": "Latin word 'unknown/ignoble', geographic context"
+    },
+    {
+      "id": 272,
+      "word": "tum",
+      "full_match": "tum in Etruria",
+      "context": "exercitum ei comparabat, tum in Etruria",
+      "label": "false_positive",
+      "reason": "Latin 'then', geographic context about Catiline conspiracy"
+    },
+    {
+      "id": 289,
+      "word": "Romanum",
+      "full_match": "Romanum in Etruria",
+      "context": "Castra sunt in Italia contra populum Romanum in Etruria",
+      "label": "false_positive",
+      "reason": "Latin 'Roman', geographic context about camps in Etruria"
+    },
+    {
+      "id": 302,
+      "word": "eorum",
+      "full_match": "eorum in Etruria",
+      "context": "omnis reliquias eorum in Etruria ad lacum Vadimonis Dolabella delevit",
+      "label": "false_positive",
+      "reason": "Latin pronoun, geographic context about battle"
+    },
+    {
+      "id": 312,
+      "word": "venientes",
+      "full_match": "venientes in Etruria",
+      "context": "Lydis qui ex Asia venientes in Etruria consederunt sub Tyrreno duce",
+      "label": "false_positive",
+      "reason": "Latin 'coming', geographic/historical context"
+    },
+    {
+      "id": 50,
+      "word": "Chalcosmaragdus",
+      "full_match": "Chalcosmaragdus dicta quod",
+      "context": "Chalcosmaragdus dicta quod viridis sit et turbida aereis venis",
+      "label": "false_positive",
+      "reason": "Greek gemstone name, no Etruscan connection"
+    },
+    {
+      "id": 61,
+      "word": "Amphora",
+      "full_match": "Amphora vocata quod",
+      "context": "Amphora vocata quod hinc et inde levetur",
+      "label": "false_positive",
+      "reason": "Greek vessel name, no Etruscan connection"
+    },
+    {
+      "id": 75,
+      "word": "Alnus",
+      "full_match": "Alnus vocatur quod",
+      "context": "Alnus vocatur quod alatur amne",
+      "label": "false_positive",
+      "reason": "Latin tree name, generic etymology"
+    },
+    {
+      "id": 77,
+      "word": "Salix",
+      "full_match": "Salix dicta quod",
+      "context": "Salix dicta quod celeriter saliat",
+      "label": "false_positive",
+      "reason": "Latin tree name, folk etymology"
+    },
+    {
+      "id": 81,
+      "word": "Cinnamomum",
+      "full_match": "Cinnamomum dictum quod",
+      "context": "Cinnamomum dictum quod cortex eius in modum cannae sit rotundus",
+      "label": "false_positive",
+      "reason": "Greek/Oriental spice name, no Etruscan connection"
+    },
+    {
+      "id": 86,
+      "word": "Mandragora",
+      "full_match": "Mandragora dicta quod",
+      "context": "Mandragora dicta quod habeat mala suaveolentia",
+      "label": "false_positive",
+      "reason": "Greek plant name, no Etruscan connection"
+    },
+    {
+      "id": 89,
+      "word": "Saxifraga",
+      "full_match": "Saxifraga vocata quod",
+      "context": "Saxifraga vocata quod semen eius petras in vesica frangat",
+      "label": "false_positive",
+      "reason": "Latin plant name, generic etymology"
+    },
+    {
+      "id": 95,
+      "word": "Citocacia",
+      "full_match": "Citocacia vocata quod",
+      "context": "Citocacia vocata quod ventrem cito depurgat",
+      "label": "false_positive",
+      "reason": "Greek/Latin plant name, generic etymology"
+    },
+    {
+      "id": 105,
+      "word": "Pastinaca",
+      "full_match": "Pastinaca vocata quod",
+      "context": "Pastinaca vocata quod eius radix praecipuus pastus sit",
+      "label": "false_positive",
+      "reason": "Latin vegetable name, generic etymology"
+    },
+    {
+      "id": 106,
+      "word": "Lactuca",
+      "full_match": "Lactuca dicta est quod",
+      "context": "Lactuca dicta est quod abundantia lactis exuberet",
+      "label": "false_positive",
+      "reason": "Latin vegetable name, etymology from lac"
+    },
+    {
+      "id": 112,
+      "word": "Victoria",
+      "full_match": "Victoria dicta quod",
+      "context": "Victoria dicta quod vi, id est virtute, adipiscatur",
+      "label": "false_positive",
+      "reason": "Latin word, generic etymology"
+    },
+    {
+      "id": 119,
+      "word": "Rubrica",
+      "full_match": "Rubrica vocata quod",
+      "context": "Rubrica vocata quod sit rubra",
+      "label": "false_positive",
+      "reason": "Latin word, generic etymology"
+    },
+    {
+      "id": 120,
+      "word": "Atramentum",
+      "full_match": "Atramentum dictum quod",
+      "context": "Atramentum dictum quod sit atrum",
+      "label": "false_positive",
+      "reason": "Latin word, generic etymology"
+    },
+    {
+      "id": 124,
+      "word": "antiquissima",
+      "full_match": "antiquissima appellata quia",
+      "context": "Tonica vestis antiquissima appellata quia in motu incedentis sonum facit",
+      "label": "false_positive",
+      "reason": "Latin word, no Etruscan connection"
+    },
+    {
+      "id": 157,
+      "word": "Ligea",
+      "full_match": "Ligea appellata ab",
+      "context": "Insula Ligea appellata ab eiecto ibi corpore Sirenis",
+      "label": "false_positive",
+      "reason": "Greek mythological name, no Etruscan connection"
+    },
+    {
+      "id": 253,
+      "word": "sic",
+      "full_match": "sic appellatur quod",
+      "context": "quae figura apud geometras ideo sic appellatur quod ad ignis speciem",
+      "label": "false_positive",
+      "reason": "Latin word 'thus', generic explanation"
+    },
+    {
+      "id": 282,
+      "word": "sit",
+      "full_match": "sit appellata a",
+      "context": "Utrum autem donum dei sit appellata a qua ista",
+      "label": "false_positive",
+      "reason": "Latin word 'be', theological context"
+    },
+    {
+      "id": 287,
+      "word": "quae",
+      "full_match": "quae appellatur a",
+      "context": "Haec enim quae appellatur arithmetica",
+      "label": "false_positive",
+      "reason": "Latin pronoun, arithmetic context"
+    },
+    {
+      "id": 308,
+      "word": "quae",
+      "full_match": "quae appellatur a",
+      "context": "accipit formulam quae appellatur arbitraria",
+      "label": "false_positive",
+      "reason": "Latin legal formula, no Etruscan connection"
+    },
+    {
+      "id": 311,
+      "word": "idcirco",
+      "full_match": "idcirco appellatur quia",
+      "context": "Vivax mens idcirco appellatur quia",
+      "label": "false_positive",
+      "reason": "Latin word 'therefore', theological context"
+    }
+  ],
+  "statistics": {
+    "total_labeled": 65,
+    "true_etruscan": 6,
+    "false_positive": 59,
+    "true_etruscan_rate": 0.092
+  }
+}

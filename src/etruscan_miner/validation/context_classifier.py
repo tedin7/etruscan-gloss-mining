@@ -231,10 +231,15 @@ class ContextClassifier:
 
         Args:
             item: Dict with word, context_before, context_after, full_match
+                  OR a pre-combined 'context' key
 
         Returns:
             Full context string
         """
+        # Check for pre-combined context first
+        if 'context' in item and item['context']:
+            return item['context'].strip()
+
         context_before = item.get('context_before', '')
         context_after = item.get('context_after', '')
         full_match = item.get('full_match', '')

@@ -37,7 +37,7 @@ def load_labeled_data(path: Path) -> list[dict]:
         path: Path to labeled_candidates.json
 
     Returns:
-        List of labeled data dicts
+        List of labeled data dicts with normalized labels
     """
     if not path.exists():
         return []
@@ -45,16 +45,45 @@ def load_labeled_data(path: Path) -> list[dict]:
     with open(path, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
-    # Handle both formats: list of items or dict with 'candidates' key
+    # Handle various formats
     if isinstance(data, list):
-        return data
+        examples = data
+    elif isinstance(data, dict) and 'examples' in data:
+        examples = data['examples']
     elif isinstance(data, dict) and 'candidates' in data:
-        return data['candidates']
+        examples = data['candidates']
     elif isinstance(data, dict):
         # Might be dict keyed by ID
-        return list(data.values())
+        examples = list(data.values())
     else:
         return []
+
+    # Normalize labels to 'etruscan' / 'latin' format expected by classifier
+    normalized = []
+    for item in examples:
+        normalized_item = item.copy()
+        label = item.get('label', '')
+
+        # Map true_etruscan -> etruscan, false_positive -> latin
+        if label == 'true_etruscan':
+            normalized_item['label'] = 'etruscan'
+        elif label == 'false_positive':
+            normalized_item['label'] = 'latin'
+
+        # Build context string if not present
+        if 'context' not in normalized_item:
+            parts = []
+            if 'context_before' in item:
+                parts.append(item['context_before'])
+            if 'full_match' in item:
+                parts.append(item['full_match'])
+            if 'context_after' in item:
+                parts.append(item['context_after'])
+            normalized_item['context'] = ' '.join(parts)
+
+        normalized.append(normalized_item)
+
+    return normalized
 
 
 def create_synthetic_data() -> list[dict]:
