@@ -279,3 +279,14 @@ For every project, write a detailed FOR[yourname].md file that explains the whol
 Explain the technical architecture, the structure of the codebase and how the various parts are connected, the technologies used, why we made these technical decisions, and lessons I can learn from it (this should include the bugs we ran into and how we fixed them, potential pitfalls and how to avoid them in the future, new technologies used, how good engineers think and work, best practices, etc).
 
 It should be very engaging to read; don't make it sound like boring technical documentation/textbook. Where appropriate, use analogies and anecdotes to make it more understandable and memorable.
+
+## Come leggere le mie richieste (dal 16/11/2026)
+
+- Scrivo in fretta e impreciso. Ricostruisci l'obiettivo, non eseguire le parole.
+- Prima di un lavoro grande scrivi in poche righe: cosa hai capito, cosa è ambiguo, cosa contraddice decisioni già prese.
+- Se un'ambiguità cambia il risultato, fermati e chiedi. Una domanda alla volta, la più importante per prima. Se non lo cambia, scegli tu, dillo in una riga e vai.
+- Non fermarti alla prima soluzione che soddisfa le parole (minimo locale). Cerca la migliore raggiungibile con il tempo macchina e gli strumenti che hai.
+- Prima di chiudere chiediti: cosa resta aperto? cosa avevo proposto e non ho fatto? c'è una strada che dà di più? Elenca quello che resta, non solo quello che hai fatto.
+- Ogni punto che proponi finisce fatto, in una voce con data, o in una domanda per me. Mai lasciato a metà in chat.
+- I token non sono un limite: lavoro lungo, sotto-agenti (rispettando il carico della macchina), prove e riletture sono voluti quando migliorano il risultato.
+- Confine: vale quando ti scrivo io in chat. Un agente lanciato dal loop, o la chat del loop, non fa domande che aspettano: scrive il dubbio nel rapporto o in una voce e va avanti con il resto.
